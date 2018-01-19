@@ -1,0 +1,421 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+        <style>
+        .main-background {
+            height: 802px;
+            background: #ffffff url("static/img/landing-image@3x.png")  no-repeat center;
+            
+        }
+        .display-block {
+            display: block;
+        }
+
+        .vertical-middle {
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            /*height: 100%;*/
+            /*position: relative;*/
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 50%;
+            position: relative;
+            text-align: center;
+        }
+
+        #menu {
+          background: hsla(1,0%,100%,.9);
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          min-height: 100%;
+          padding-top: 80px;
+        }
+
+        .spanner {
+            /*width: 100%;*/
+            /*position: absolute;*/
+            color: white;
+        }
+
+        .top-menu {
+          background: url(static/svg/menu.svg) no-repeat center;
+          background-size: 25px;
+          padding: 0.975rem .75rem;
+        }
+
+        .top-instagram {
+          background: url(static/svg/instagram.svg) no-repeat center;
+          background-size: 25px;
+          padding: 0.975rem .75rem;
+        }
+
+        .top-facebook {
+          background: url(static/svg/facebook.svg) no-repeat center;
+          background-size: 25px;
+          padding: 0.975rem .75rem;
+        }
+
+        .description-header {
+          color: white;
+          /*background-color: ;*/
+          background: #183E4E url(static/img/leaf.png) no-repeat bottom 0px left 70px;
+          background-size: 54px;
+          padding: 23px 0 31px 130px;
+        }
+
+        .description-heading {
+          /*left: 120px;
+          top: 20px;
+          position: relative;*/
+        }
+
+        .blue-left {
+          border-left: 3.49px solid #183E4E;
+        }
+
+        .blue-top {
+          border-top: 2.49px solid #183E4E;
+        }
+
+        .blue-bottom {
+          border-bottom: 2.49px solid #183E4E;
+        }
+
+        .main-description-container {
+          margin-left: 98px;
+          padding-left: 25px;
+          padding-top: 30px;
+        }
+
+        .invite-description-container {
+          margin-left: 98px;
+          padding-top: 30px;
+        }
+
+        .description {
+          max-width: 1200px;
+          font-size: 18px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #173e4f;
+        }
+
+        .description-list-item {
+          max-width: 1200px;
+          margin-top: 40px;
+          font-weight: bold;
+        }
+
+        .community {
+          background: url(static/img/community.png) no-repeat left 0px;
+          background-size: 50px;
+        }
+
+        .self {
+          background: url(static/img/self.png) no-repeat left 0px;
+          background-size: 50px;
+        }
+
+        .nature {
+          background: url(static/img/nature.png) no-repeat left 0px;
+          background-size: 50px;
+        }
+
+        .description-list-text {
+          padding-left: 67px;
+        }
+
+        .basic-description {
+          padding-bottom: 60px;
+        }
+
+        .more-about-btn {
+          width: 300px;
+          height: 40px;
+          background-color: #173e4f;
+          font-family: Avenir;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+          color: #ffffff;
+          margin-top: 30px;
+        }
+
+        .statistics-text {
+          padding: 20px 98px;
+        }
+
+        .statistics-text-left {
+          display: inline-block;
+        }
+
+        .statistics-text-right {
+          display: inline-block;
+          float: right; 
+        }
+
+        .statistics-items {
+          display: flex;
+        }
+
+        .statistics-item {
+          /*display: inline-block;*/
+          flex-basis: 100%;
+          height: 240px;
+        }
+
+        .land {
+          background: url(static/img/land.svg) no-repeat center;
+          background-color: #f8f8f8
+        }
+
+        .water {
+          background: url(static/img/water.svg) no-repeat center;
+        }
+
+        .gases {
+          background: url(static/img/gases.svg) no-repeat center;
+          background-color: #f8f8f8
+        }
+
+        .footer-container {
+          background-color: #183E4E ;
+          padding: 20px 80px;
+        }
+
+        .footer {
+          border-bottom: 1px solid #ffffff;
+          overflow: hidden
+        }
+
+        .footer-brand {
+          padding-top: 80px;
+          display: inline-block;
+        }
+
+        .footer-contact-details {
+          padding: 80px 0px 30px 0;
+          display: inline-block;
+          float: right;
+          color: #fff;
+          font-family: Avenir;
+          font-size: 30px;
+          font-weight: 500;
+        }
+
+        .footer-address-container {
+          display: flex;
+          text-align: right;
+          font-size: 14px;
+        }
+
+        .footer-cafe-address {
+          flex-basis: 100%;
+        }
+
+        .footer-co-address {
+          flex-basis: 100%;
+        }
+
+        </style>
+    </head>
+
+    <body>
+      <div class="main-background">
+
+          <div class="navbar navbar-default navbar-static-top" role="navigation">
+                
+            <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+              <!-- <div src="static/svg/menu.svg" /> -->
+            </button>
+
+            <div class="pull-right">
+              <div>
+                <button class="top-instagram">
+                <!-- <div src="static/svg/menu.svg" /> -->
+                </button>
+              </div>
+
+              <div>
+                <button class="top-facebook">
+                <!-- <div src="static/svg/menu.svg" /> -->
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- Menu -->
+          <div id="menu" class="panel panel-default panel-collapse collapse">
+              <div class="container">
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+
+          <div class="vertical-middle">
+              <div class="spanner">GREENR</div>
+              <div class="spanner">A HEALTHY & HAPPY LIFE</div>
+          </div>
+
+      </div>
+
+      <div class="description-header">
+        <div class="description-heading">GREENR</div>
+        <div class="description-heading">PHILOSOPHY</div>
+      </div>
+
+      <div class="basic-description">
+        <div class="main-description-container blue-left">
+          <div class="description">
+            “You are what you eat” goes the old adage. At GREENR, we live this truth.
+            <br>
+            We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette. At GREENR, we aspire to create this reality every day.
+          </div>
+          
+          <div class="description-list-item community">
+            <div class="description-list-text">
+              COMMUNITY
+              <br>
+              One liner about how you gotta be socially sustainable
+            </div>
+          </div>
+
+          <div class="description-list-item self">
+            <div class="description-list-text">
+              SELF
+              <br>
+              One liner about how you gotta be self sustainable //personal
+            </div>
+          </div>
+
+          <div class="description-list-item nature">
+            <div class="description-list-text">
+              COMMUNITY
+              <br>
+              One liner about how you gotta be naturally sustainable //environmental
+            </div>
+          </div>
+        </div>
+
+
+        <div class="invite-description-container">
+          <div>
+            Welcome to the future. 
+            <br>
+            Welcome to a world where what we consume doesn’t consume us, rather enhances our wellbeing. 
+            <br>
+            Welcome to a GREENR world.  
+          </div>
+
+          <div>
+            <button class="more-about-btn">
+              MORE ABOUT PLATMEATS
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="statistics-container">
+
+        <div class="statistics-text blue-top blue-bottom">
+          <div class="statistics-text-left">
+            Not just words but
+            <br>
+            NUMBERS
+          </div>
+
+          <div class="statistics-text-right">
+            (IN COMPARISON TO MEAT*) 
+          </div>
+        </div>
+
+        <div class="statistics-items">
+          <div class="statistics-item land">
+            
+          </div>
+
+          <div class="statistics-item water">
+            
+          </div>
+
+          <div class="statistics-item gases">
+            
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-container">
+        <div class="footer">
+          <div class="footer-brand">
+              <div class="spanner">GREENR</div>
+              <div class="spanner">A HEALTHY & HAPPY LIFE</div>
+          </div>
+
+          <div class="footer-contact-details">
+            <div class="">Cafe & Kitchen | Co - Space</div>
+            <div class="footer-address-container">
+              <div class='footer-cafe-address'>
+                <div>
+                  416, Gora Street
+                  <br>
+                  Shahpur Jat
+                  <br>
+                  Siri Fort, New Delhi
+                  <br>
+                  110049
+                </div>
+                <div class='phone-number'>
+                  +917043575339
+                </div>
+                <div class="maps-locations">
+                  Open in Google Maps
+                </div>
+              </div>
+              <div class='footer-co-address'>
+                <div>
+                  416, Gora Street
+                  <br>
+                  Shahpur Jat
+                  <br>
+                  Siri Fort, New Delhi
+                  <br>
+                  110049
+                </div>
+                <div class='phone-number'>
+                  +917043575339
+                </div>
+                <div class="maps-locations">
+                  Open in Google Maps
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </body>
+</html>
