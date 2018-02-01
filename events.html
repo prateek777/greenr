@@ -9,39 +9,36 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="main.css"/>
+        <script
+		  src="http://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous">
+		</script>
+
+        
+
     </head>
 
     <body>
-      <div class="main-background">
-        <div class="main-background-gradient">
+      <div class="plain-background">
 
-            <div class="navbar navbar-default navbar-static-top" role="navigation">
-                  
-              <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
-                <!-- <div src="static/svg/menu.svg" /> -->
-              </button>
+        <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
+          <div class="display-inline-block  pl-3"> 
+            <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+              <!-- <div src="static/svg/menu.svg" /> -->
+            </button>
+          </div>
 
-              <div class="pull-right">
-                <div>
-                  <button class="top-instagram">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
-                </div>
+          <div class="main-logo-center">
+            <img class="main-logo-green" src="static/img/greenr-logo-green.png"/>
+          </div>
 
-                <div>
-                  <button class="top-facebook">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="vertical-middle">
-                <div class="main-logo"></div>
-            </div>
-
+          <div class="center-header">
+            EVENTS
+          </div>
+          
         </div>
+
       </div>
 
       <!-- Menu -->
@@ -61,7 +58,7 @@
             <div class="menu-items">
               <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
               <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" data-toggle="collapse" data-target="#menu">CAFE</a></div>
               <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
               <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
               <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
@@ -107,91 +104,38 @@
           </div>
       </div>
 
-      <div class="description-header">
-        <div class="description-heading-brand">GREENR</div>
-        <div class="description-heading-body">PHILOSOPHY</div>
+      <!-- <div class="description-plain-container top-level-menu-margin">
+        <div class="description-plain">
+          We are working with some extraordinary minds to showcase some amazing products. More on this Soon!
+        </div>
       </div>
-
-      <div class="basic-description">
-        <div class="main-description-container blue-left">
-          <div class="description">
-            “You are what you eat” goes the old adage. At GREENR, we live this truth.
-            <br>
-            We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette. At GREENR, we aspire to create this reality every day.
-          </div>
-          
-          <div class="description-list-item community">
-            <div class="description-list-text">
-              <span class="description-list-heading"> COMMUNITY </span>
-              <br>
-              <span class="description-list-body"> One liner about how you gotta be socially sustainable </span>
-            </div>
-          </div>
-
-          <div class="description-list-item self">
-            <div class="description-list-text">
-              <span class="description-list-heading">SELF</span>
-              <br>
-              <span class="description-list-body">One liner about how you gotta be self sustainable //personal
-            </div>
-          </div>
-
-          <div class="description-list-item nature">
-            <div class="description-list-text">
-              <span class="description-list-heading">COMMUNITY</span>
-              <br>
-              <span class="description-list-body">One liner about how you gotta be naturally sustainable //environmental
-            </div>
-          </div>
-        </div>
-
-
-        <div class="invite-description-container">
-          <div>
-            Welcome to the future. 
-            <br>
-            Welcome to a world where what we consume doesn’t consume us, rather enhances our wellbeing. 
-            <br>
-            Welcome to a GREENR world.  
-          </div>
-
-          <div class="more-about-btn-container">
-            <button class="more-about-btn">
-              MORE ABOUT PLATMEATS
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="statistics-container">
-
-        <div class="statistics-text blue-top blue-bottom">
-          <div class="statistics-text-left">
-            Not just words but
-            <br>
-            NUMBERS
-          </div>
-
-          <div class="statistics-text-right">
-            (IN COMPARISON TO MEAT*) 
-          </div>
-        </div>
-
-        <div class="statistics-items">
-          <div class="statistics-item land">
-            
-          </div>
-
-          <div class="statistics-item water">
-            
-          </div>
-
-          <div class="statistics-item gases">
-            
-          </div>
-        </div>
-
+ -->
+      <div class="events top-level-menu-margin">
+      	<div id="valid-event">
+	      	<div class="event-image" id="event-image">
+	      	</div>
+	      	<div class="center-header event-header" id="event-header">
+	            
+	        </div>
+	        <div class="invite-description-container">
+			        <div class="event-description" id="event-description">
+			        	
+			        </div>
+			        <div class="more-about-btn-container">
+			        	<a id="event-link">
+				            <button class="more-about-btn">
+				              Attend this event
+				            </button>
+				        </a>
+			        </div>
+		    </div>
+		</div>
+		<div id="invalid-event">
+			<div class="invite-description-container">
+			    <div class="event-description" id="noevent-description">
+			    </div>
+			</div>
+		</div>      	
       </div>
 
       <div class="footer-container">
@@ -240,12 +184,50 @@
               </div>
             </div>
           </div>
-
-          <div class="facebook">
-            
-          </div>
         </div>  
       </div>
     </body>
-        
+
+    <script>
+    	$("#event-image").css("position", "relative");
+		window.fbAsyncInit = function() {
+		FB.init({
+		  appId            : '1912273135754917',
+		  autoLogAppEvents : true,
+		  xfbml            : true,
+		  version          : 'v2.12'
+		});
+
+		FB.api(
+		  '/141841699831498/events',
+		  'GET',
+		  {
+		    "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description,photos",
+		    "access_token": "EAAbLM8j4XqUBAHfTjyWe22aMhtK6hnR3zffST1dRpGSJho0s3WHW7wFD9wN39drYrgZCEUxV5jG3oCzJJNBTPSnjD2FFacAdaDJ74wLKGZBBdg5Df6iF2liw9ubaq2EF5sqZAulkLwHSXVf7ypW3pYw3L4KsCDUFISAH23OW6GwPJx97BZBZAw4YXMl18ZAcl3ZCMqJoOrUvgZDZD",
+		  },
+		  function(response) {
+		    console.log(response);
+		    if (response.data) {
+		    	$('#event-image').css('background', 'url('+ response.data[0].cover.source + ') center/150px no-repeat');
+			    $('#event-image').addClass('event-image');
+			    $('#event-header').html(response.data[0].name + '<br>' + response.data[0].start_time)
+			    $('#event-description').html(response.data[0].description)
+			    $('#event-link').attr("href", 'https://www.facebook.com/events/' + response.data[0].id)
+			} else {
+				$('#valid-event').css('display', 'none');
+				$('#noevent-description').html("Sorry We don't have any events right for now, but keep checking this space and our facebook page for more.");
+			}
+		  }
+		);
+		};
+
+		(function(d, s, id){
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 console.log('jhi');
+		 js.src = "https://connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 </html>

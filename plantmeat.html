@@ -16,11 +16,17 @@
       <div class="main-background">
         <div class="main-background-gradient">
 
-            <div class="navbar navbar-default navbar-static-top" role="navigation">
-                  
-              <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
-                <!-- <div src="static/svg/menu.svg" /> -->
-              </button>
+            <div class="navbar fixed-top navbar-light p-0" role="navigation">
+              
+              <div class="display-inline-block  pl-3">
+                <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+                  <!-- <div src="static/svg/menu.svg" /> -->
+                </button>
+              </div>
+
+              <div class="main-logo-center">
+                <img class="main-logo-green" src="static/img/greenr-logo.svg"/>
+              </div>
 
               <div class="pull-right">
                 <div>
@@ -38,25 +44,70 @@
 
             </div>
 
+        </div>
+      </div>
 
+      <!-- Menu -->
+      <div id="menu" class="panel panel-default panel-collapse collapse">
+          <div class="menu-container">
+            <div class="menu-header-container">
+              <div class="close-button-container">
+                <button class="menu-close-button" data-toggle="collapse" data-target="#menu">
+                </button>
+              </div>
+              <div class="menu-logo-container">
+                <div class="greenr-menu-logo">
+                </div>
+              </div>  
+            </div>
+            
+            <div class="menu-items">
+              <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
+              <div class="menu-item-container"><a class="menu-item" data-toggle="collapse" data-target="#menu">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
+            </div>
 
-            <!-- Menu -->
-            <div id="menu" class="panel panel-default panel-collapse collapse">
-                <div class="container">
-                    <ul class="nav nav-pills nav-stacked">
-                      <li><a href="#">Item 1</a></li>
-                      <li><a href="#">Item 2</a></li>
-                    </ul>
+            <div class="menu-address-container mobile-hidden">
+                <div class='menu-cafe-address'>
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
+                </div>
+                
+                <div class='menu-co-address'>
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
                 </div>
             </div>
-
-
-
-            <div class="vertical-middle">
-                <div class="main-logo"></div>
-            </div>
-
-        </div>
+          </div>
       </div>
 
       <div class="description-header">
@@ -77,7 +128,7 @@
             <div id="accordion">
               <div class="accordion-group row">
                 <div class='accordion-subgroup col-sm-6'>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <button class="accordion-btn btn-descriptor-item first" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   </button>
                   <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   </button>
@@ -95,7 +146,7 @@
               </div>
 
               <div class="card no-border">
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
                     <div class="item-heading">Meatless Meatballs1</div>
                     “1You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
@@ -157,7 +208,7 @@
           </div>
 
           <div class="footer-contact-details">
-            <div class="">Cafe & Kitchen | Co - Space</div>
+            <div class="footer-contact-heading">Cafe & Kitchen | Co - Space</div>
             <div class="footer-address-container">
               <div class='footer-cafe-address'>
                 <div>
@@ -176,6 +227,7 @@
                   Open in Google Maps
                 </div>
               </div>
+              <div class="footer-contact-heading desktop-hidden">Cafe & Kitchen | Co - Space</div>
               <div class='footer-co-address'>
                 <div>
                   416, Gora Street

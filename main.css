@@ -1,5 +1,6 @@
-body {
+        body {
           font-family: Avenir;
+          min-height: 100vh;
         }
 
         @font-face {
@@ -48,11 +49,6 @@ body {
           width: 300px;
         }
 
-        .footer-logo {
-          height: 70px;
-          width: 300px;
-          background: url(static/img/greenr-logo.svg) no-repeat;
-        }
 
         .display-block {
             display: block;
@@ -74,13 +70,13 @@ body {
         }
 
         #menu {
-          background: hsla(1,0%,100%,.9);
+          background: hsla(1,0%,100%,1);
           position: absolute;
           top: 0;
           right: 0;
           left: 0;
           min-height: 100%;
-          padding-top: 80px;
+          z-index: 9999;
         }
 
         .spanner {
@@ -110,10 +106,22 @@ body {
         .description-header {
           color: white;
           /*background-color: ;*/
-          background: #183E4E url(static/img/leaf.png) no-repeat bottom 0px left 70px;
+          background: #183E4E url(static/img/leaf.png) no-repeat bottom 0px left 1px;
           background-size: 54px;
           padding: 25px 0 17px 131px;
         }
+
+        @media screen and (min-width: 480px) {
+          .description-header {
+            color: white;
+            /*background-color: ;*/
+            background: #183E4E url(static/img/leaf.png) no-repeat bottom 0px left 70px;
+            background-size: 54px;
+            padding: 25px 0 17px 131px;
+          }
+        }
+
+        
 
         .center-header {
           color: white;
@@ -123,6 +131,7 @@ body {
           text-align: center;
           font-size: 20px;
           font-weight: 500;
+          flex-basis: 100%;
         }
 
         .description-heading-brand {
@@ -155,18 +164,18 @@ body {
         }
 
         .main-description-container {
-          margin-left: 98px;
+          margin-left: 30px;
           padding-left: 25px;
           padding-top: 30px;
         }
 
         .invite-description-container {
-          margin-left: 88px;
+          margin-left: 20px;
           padding-top: 30px;
         }
 
         .plantmeats-heading {
-          font-size: 36px;
+          font-size: 20px;
           font-weight: 500;
           text-align: center;
           color: #173e4f;
@@ -174,6 +183,30 @@ body {
           background-color: #f8f8f8;
           padding: 60px;
           margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: 480px) {
+          .main-description-container {
+            margin-left: 98px;
+            padding-left: 25px;
+            padding-top: 30px;
+          }
+
+          .invite-description-container {
+            margin-left: 88px;
+            padding-top: 30px;
+          }
+
+          .plantmeats-heading {
+            font-size: 36px;
+            font-weight: 500;
+            text-align: center;
+            color: #173e4f;
+            max-width: 1200px;
+            background-color: #f8f8f8;
+            padding: 60px;
+            margin-bottom: 40px;
+          }
         }
 
         .description {
@@ -232,13 +265,13 @@ body {
 
         .more-about-btn-container {
           border: #183E4E solid 1px;
-          width: 305px;
+          width: 265px;
           margin-top: 30px;
           margin-left: 12px;
         }
 
         .more-about-btn {
-          width: 310px;
+          width: 275px;
           height: 40px;
           background-color: #173e4f;
           font-family: Avenir;
@@ -249,24 +282,68 @@ body {
           margin-top: 0px;
           position: relative;
           top: -5px;
-          left: -12px;
+          left: -19px;
         }
+        
+
+        @media screen and (min-width: 480px) {
+          .more-about-btn-container {
+            border: #183E4E solid 1px;
+            width: 305px;
+            margin-top: 30px;
+            margin-left: 12px;
+          }
+
+          .more-about-btn {
+            width: 310px;
+            height: 40px;
+            background-color: #173e4f;
+            font-family: Avenir;
+            font-size: 16px;
+            font-weight: 900;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 0px;
+            position: relative;
+            top: -5px;
+            left: -12px;
+          }
+        }
+        
+
+        
 
         .statistics-text {
-          padding: 20px 98px;
+          padding: 20px 48px;
         }
 
         .statistics-text-left {
-          display: inline-block;
+          display: block;
+          text-align: center;
         }
 
         .statistics-text-right {
-          display: inline-block;
-          float: right; 
+          display: block;
+          text-align: center;
         }
 
         .statistics-items {
-          display: flex;
+          display: block;
+        }
+
+        @media screen and (min-width: 480px) {
+          .statistics-text-left {
+            display: inline-block;
+          }
+
+          .statistics-text-right {
+            display: inline-block;
+            float: right; 
+          }
+
+          .statistics-items {
+            display: flex;
+          }
         }
 
         .statistics-item {
@@ -278,63 +355,145 @@ body {
         .land {
           background: url(static/img/land.svg) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 40%;
+          background-size: 50%;
         }
 
         .water {
           background: url(static/img/water.svg) no-repeat center;
-          background-size: 40%;
+          background-size: 50%;
         }
 
         .gases {
           background: url(static/img/gases.svg) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 40%;
+          background-size: 50%;
         }
 
         .footer-container {
           background-color: #183E4E ;
-          padding: 20px 80px;
+          padding: 20px;
         }
 
         .footer {
           border-bottom: 1px solid #ffffff;
-          overflow: hidden
+          overflow: hidden;
+          padding: 0 20px;
         }
 
         .footer-brand {
-          padding-top: 80px;
-          display: inline-block;
+          padding-top: 40px;
+          /*display: block;*/
+          margin: 0 auto;
         }
+        .footer-logo {
+          background: url(static/img/greenr-logo.svg) center no-repeat;
+          margin: 0 auto;
+          background-size: 170px 30px;
+          padding: 50px 100px;
+        }
+        
 
         .footer-contact-details {
-          padding: 80px 0px 30px 0;
-          display: inline-block;
-          float: right;
+          padding: 20px 0px 30px 0;
           color: #fff;
           font-family: Avenir;
           font-size: 30px;
           font-weight: 500;
+          text-align: center;
+        }
+
+        .footer-cafe-address {
+          flex-basis: 50%;
+          padding: 10px;
+        }
+
+        .footer-co-address {
+          flex-basis: 50%;
+          padding: 10px;
         }
 
         .footer-address-container {
           display: flex;
-          text-align: right;
+          flex-direction: column;
           font-size: 14px;
         }
 
-        .footer-cafe-address {
-          flex-basis: 100%;
+        .footer-contact-heading {
+          padding-top: 20px;
+          font-size: 16px;
         }
 
-        .footer-co-address {
-          flex-basis: 100%;
+        @media screen and (min-width: 1070px) {
+          .footer-brand {
+            padding-top: 80px;
+            display: inline-block;
+          }
+
+          .footer-contact-details {
+            margin: 0 auto;
+            padding: 80px 0px 30px 0;
+            display: inline-block;
+            float: right;
+            color: #fff;
+            font-family: Avenir;
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          .footer-address-container {
+            display: flex;
+            text-align: right;
+            flex-direction: row;
+            font-size: 14px;
+          }
+
+        }
+
+        @media screen and (min-width: 768px) {
+
+          .footer-container {
+            background-color: #183E4E ;
+            padding: 20px 80px;
+          }
+
+          .footer-cafe-address {
+            flex-basis: 100%;
+          }
+
+          .footer-co-address {
+            flex-basis: 100%;
+          }
+
+          .footer-address-container {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+          }
+
+          .desktop-hidden {
+            display: none;
+          }
+        }
+
+        @media screen and (min-width: 480px) {
+          .footer-contact-heading {
+            padding-top: 0;
+            font-size: 30px
+          }
+
+          .footer-logo {
+            height: 70px;
+            width: 300px;
+            background: url(static/img/greenr-logo.svg) no-repeat;
+            margin: 0 auto;
+          }
         }
 
         .phone-number {
           font-size: 18px;
           font-weight: 500;
         }
+
 
         .btn-descriptor-item {
           background: url("static/img/descriptor-item.png") left no-repeat;
@@ -345,6 +504,16 @@ body {
         }
 
         .btn-descriptor-item.collapsed {
+          background: url("static/img/descriptor-item-open.png") left no-repeat;
+          padding: 30px;
+          border: none;
+          background-size: 60px;
+          outline: none;
+        }
+
+        
+
+        .btn-descriptor-item.first.collapsed {
           background: url("static/img/descriptor-item-open.png") left no-repeat;
           padding: 30px;
           border: none;
@@ -484,7 +653,7 @@ body {
         padding: 60px;
       }
 
-      @media screen and (min-width: 1071px) {
+      @media screen and (min-width: 1070px) {
         .team-item-description-container {
           padding: 20px;
         }
@@ -503,7 +672,7 @@ body {
         flex-direction: column;
       }
 
-      @media screen and (min-width: 1071px) {
+      @media screen and (min-width: 1070px) {
         .team-item {
           flex-direction: row;
         }
@@ -514,8 +683,97 @@ body {
         flex-direction: column;
       }
 
-      @media screen and (min-width: 1071px) {
+      @media screen and (min-width: 1070px) {
         .team-item-reverse {
           flex-direction: row-reverse;
         }
+      }
+
+      .menu-container {
+        padding: 50px 0 1500px 60px;
+      }
+
+      .menu-header-container {
+        /*padding: 10px 0;*/
+        height: 120px;
+      }
+
+      .menu-item-container {
+        padding: 20px 0px;
+      }
+
+      .menu-item {
+        font-family: Avenir;
+        font-size: 24px;
+        font-weight: 500;
+        color: #173e4f;
+      }
+
+      .close-button-container {
+        display: inline-block;
+
+      }
+
+      .menu-close-button {
+        background: url("static/img/close.png") left no-repeat;
+        padding: 20px;
+        background-size: 40px;
+        border: none;
+        display: inline-block;
+      }
+
+      .menu-logo-container {
+        display: inline-block;
+        float: right;
+        margin: 0 20px;
+      }
+
+      .greenr-menu-logo {
+        background: url(static/img/menu-logo.png) no-repeat;
+        background-size: 100px 40px;
+        padding: 40px;
+        height: 40px;
+        width: 100px;
+      }
+      
+      .mobile-hidden {
+        display: none;
+      }
+
+      @media screen and (min-width: 480px) {
+        .menu-address-container {
+          padding: 30px 30px 0 0;
+          display: block;
+        }
+
+        .greenr-menu-logo {
+          background: url(static/img/menu-logo.png) no-repeat;
+          background-size: 200px 90px;
+          padding: 40px;
+          height: 90px;
+          width: 200px;
+        }  
+      }
+
+      .menu-cafe-address {
+        display: inline-block;
+        text-align: left;
+        float: left;
+      }
+
+      .menu-co-address {
+        display: inline-block;
+        text-align: right;
+        float: right;
+      }
+
+      .top-level-menu-margin {
+        margin-top: 170px;
+      }
+
+      .event-image {
+        /*background-position: center;
+        background-repeat: no-repeat;
+        background-size: 150px;*/
+        padding: 100px;
       }
