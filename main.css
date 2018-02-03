@@ -15,6 +15,12 @@
             
         }
 
+        .main-background2 {
+            height: 802px;
+            background: url("static/img/landing-image2@3x.jpg")  no-repeat center;
+            background-size: cover;
+        }
+
         .plain-background {
           background-color: #fff;
         }
@@ -76,6 +82,7 @@
           right: 0;
           left: 0;
           min-height: 100%;
+          width: 50%;
           z-index: 9999;
         }
 
@@ -87,6 +94,12 @@
 
         .top-menu {
           background: url(static/svg/menu.svg) no-repeat center;
+          background-size: 25px;
+          padding: 0.975rem .75rem;
+        }
+
+        .top-menu-white {
+          background: url(static/img/menu-white.svg) no-repeat center;
           background-size: 25px;
           padding: 0.975rem .75rem;
         }
@@ -311,20 +324,27 @@
         }
         
 
-        
-
         .statistics-text {
           padding: 20px 48px;
         }
 
         .statistics-text-left {
-          display: block;
           text-align: center;
+          display: block;
+        }
+
+        .stats-head-row2 {
+          font-size: 24px;
+        }
+
+        .stats-head-row1 {
+          font-size: 14px;
         }
 
         .statistics-text-right {
           display: block;
           text-align: center;
+          font-size: 10px;
         }
 
         .statistics-items {

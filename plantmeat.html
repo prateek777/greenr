@@ -9,12 +9,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="main.css"/>
+
+        <script
+          src="http://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
+        </script>
         
     </head>
 
     <body>
-      <div class="main-background">
-        <div class="main-background-gradient">
+      <div class="main-background2">
+        <div class="">
 
             <div class="navbar fixed-top navbar-light p-0" role="navigation">
               
@@ -25,7 +31,7 @@
               </div>
 
               <div class="main-logo-center">
-                <img class="main-logo-green" src="static/img/greenr-logo.svg"/>
+                <img class="main-logo-green" src="static/img/greenr-logo-white-sm.svg"/>
               </div>
 
               <div class="pull-right">
@@ -250,4 +256,28 @@
         </div>  
       </div>
     </body>
+    <script type="text/javascript">
+      $('#collapseOne').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+      // function keepFirstOpen(accordionGroup) {
+      //   // console.log(accordionGroup);
+      //   var openCount = 0;
+      //   $('.accordion-btn').each(function(i, button) {
+      //     console.log(button.getAttribute('aria-expanded'))
+      //     if ( button.getAttribute('aria-expanded') === "true" && button.getAttribute('aria-controls') !== "collapseOne") {
+      //       openCount += 1
+      //     }
+      //   });
+      //   console.log(openCount);
+      //   if (openCount === 0) {
+      //     $('.first').attr('aria-expanded', 'true')
+      //     if ($('.first').hasClass('collapsed')) {
+      //       $('.first').removeClass('collapsed');
+      //     }
+      //     $('#collapseOne').show()
+      //     // $('#collapseOne').addClass('show');
+      //   }
+      // }
+    </script>
 </html>
