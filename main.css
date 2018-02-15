@@ -10,14 +10,14 @@
 
         .main-background {
             height: 802px;
-            background: url("static/img/landing-image@3x.jpg")  no-repeat center;
+            background: url("static/img/landing-image.jpg")  no-repeat center;
             background-size: cover;
             
         }
 
         .main-background2 {
             height: 802px;
-            background: url("static/img/landing-image2@3x.jpg")  no-repeat center;
+            background: url("static/img/rectangle-4.jpg")  no-repeat center;
             background-size: cover;
         }
 
@@ -34,10 +34,8 @@
         .main-logo {
             height: 70px;
             background: url("static/img/greenr-logo.svg")  no-repeat center;
-            position: relative;;
-            top: -100px;
-            /*background-size: cover;*/
-            
+            position: relative;
+            top: -100px;            
         }
 
         .display-inline-block {
@@ -77,12 +75,9 @@
 
         #menu {
           background: hsla(1,0%,100%,1);
-          position: absolute;
+          position: fixed;
           top: 0;
-          right: 0;
-          left: 0;
-          min-height: 100%;
-          width: 50%;
+          width: 60%;
           z-index: 9999;
         }
 
@@ -102,18 +97,21 @@
           background: url(static/img/menu-white.svg) no-repeat center;
           background-size: 25px;
           padding: 0.975rem .75rem;
+          outline: none;
         }
 
         .top-instagram {
           background: url(static/img/insta.svg) no-repeat;
           padding: 0.675rem .75rem;
           border: none;
+          cursor:pointer;
         }
 
         .top-facebook {
           background: url(static/img/fb.svg) no-repeat;
           padding: 0.675rem .75rem;
           border: none;
+          cursor:pointer;
         }
 
         .description-header {
@@ -125,6 +123,10 @@
         }
 
         @media screen and (min-width: 480px) {
+          #menu {
+            width: 50%;
+          }
+
           .description-header {
             color: white;
             /*background-color: ;*/
@@ -231,7 +233,6 @@
           line-height: normal;
           letter-spacing: normal;
           text-align: left;
-          c
         }
 
         .description-list-item {
@@ -296,6 +297,7 @@
           position: relative;
           top: -5px;
           left: -19px;
+          border: none;
         }
         
 
@@ -326,6 +328,8 @@
 
         .statistics-text {
           padding: 20px 48px;
+          display: block;
+          align-items: center;
         }
 
         .statistics-text-left {
@@ -335,6 +339,7 @@
 
         .stats-head-row2 {
           font-size: 24px;
+          font-weight: 500;
         }
 
         .stats-head-row1 {
@@ -345,6 +350,7 @@
           display: block;
           text-align: center;
           font-size: 10px;
+          flex-grow: 100;
         }
 
         .statistics-items {
@@ -352,15 +358,22 @@
         }
 
         @media screen and (min-width: 480px) {
+
+          .statistics-text {
+            display: flex;
+          }
           .statistics-text-left {
+            text-align: left;
             display: inline-block;
           }
 
           .statistics-text-right {
             display: inline-block;
-            float: right; 
+            text-align: right;
           }
+        }
 
+        @media screen and (min-width: 768px) {
           .statistics-items {
             display: flex;
           }
@@ -375,18 +388,21 @@
         .land {
           background: url(static/img/land.svg) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 50%;
+          background-size: 100% 135px;
+          flex-grow: 100;
         }
 
         .water {
           background: url(static/img/water.svg) no-repeat center;
-          background-size: 50%;
+          background-size: 100% 135px;
+          flex-grow: 100;
         }
 
         .gases {
           background: url(static/img/gases.svg) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 50%;
+          background-size: 100% 135px;
+          flex-grow: 100;
         }
 
         .footer-container {
@@ -710,7 +726,7 @@
       }
 
       .menu-container {
-        padding: 50px 0 1500px 60px;
+        padding: 32px 0 100% 16px;
       }
 
       .menu-header-container {
@@ -721,6 +737,41 @@
       .menu-item-container {
         padding: 20px 0px;
       }
+
+      <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
+          <div class="display-inline-block  pl-3"> 
+            <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+              <!-- <div src="static/svg/menu.svg" /> -->
+            </button>
+          </div>
+
+          <div class="main-logo-center">
+            <img class="main-logo-green" src="static/img/greenr-logo-green.png"/>
+          </div>
+
+          <div class="center-header">
+            RETAIL
+          </div>
+          
+        </div>
+
+
+      .menu-items {
+        padding-left: 0px;
+      }
+
+      .custom-titlebar {
+        position: fixed;
+        top: 90px;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      button:focus {
+        outline: none;
+        cursor:pointer;
+      }
+
 
       .menu-item {
         font-family: Avenir;
@@ -740,12 +791,18 @@
         background-size: 40px;
         border: none;
         display: inline-block;
+        outline: none;
       }
 
       .menu-logo-container {
         display: inline-block;
         float: right;
         margin: 0 20px;
+      }
+
+      .menu-address-container {
+        padding: 30px 30px 0 0;
+        display: block;
       }
 
       .greenr-menu-logo {
@@ -761,8 +818,11 @@
       }
 
       @media screen and (min-width: 480px) {
+        .menu-items {
+          padding-left: 60px;
+        }
         .menu-address-container {
-          padding: 30px 30px 0 0;
+          padding: 30px 30px 0 60px;
           display: block;
         }
 
@@ -782,9 +842,14 @@
       }
 
       .menu-co-address {
-        display: inline-block;
-        text-align: right;
-        float: right;
+        display: none;
+      }
+      @media screen and (min-width: 1070px) {
+        .menu-co-address {
+          display: inline-block;
+          text-align: right;
+          float: right;
+        }
       }
 
       .top-level-menu-margin {

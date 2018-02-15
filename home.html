@@ -15,23 +15,34 @@
       <div class="main-background">
         <div class="main-background-gradient">
 
-            <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar fixed-top  py-0" id="main-header" role="navigation">
                   
-              <button class="btn pull-left top-menu-white" data-toggle="collapse" data-target="#menu">
+              <button class="btn pull-left top-menu-white" id="btn-normal" data-toggle="collapse" data-target="#menu">
+                <!-- <div src="static/svg/menu.svg" /> -->
+              </button>
+              <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="collapse" data-target="#menu">
                 <!-- <div src="static/svg/menu.svg" /> -->
               </button>
 
+              <div class="main-logo-center">
+                <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.png"/>
+              </div>
+
               <div class="pull-right">
                 <div>
-                  <button class="top-instagram">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
+                  <a href="https://www.instagram.com/begreenr/">
+                    <button class="top-instagram">
+                    <!-- <div src="static/svg/menu.svg" /> -->
+                    </button>
+                  </a>
                 </div>
 
                 <div>
-                  <button class="top-facebook">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
+                  <a href="https://www.facebook.com/begreenr/">
+                    <button class="top-facebook">
+                    <!-- <div src="static/svg/menu.svg" /> -->
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -45,7 +56,7 @@
       </div>
 
       <!-- Menu -->
-      <div id="menu" class="panel panel-default panel-collapse collapse">
+      <div id="menu" class="panel panel-default panel-right panel-collapse collapse">
           <div class="menu-container">
             <div class="menu-header-container">
               <div class="close-button-container">
@@ -107,7 +118,7 @@
           </div>
       </div>
 
-      <div class="description-header">
+      <div class="description-header" id="header-2">
         <div class="description-heading-brand">GREENR</div>
         <div class="description-heading-body">PHILOSOPHY</div>
       </div>
@@ -251,5 +262,26 @@
         </div>  
       </div>
     </body>
-        
+    <script type="text/javascript">
+      $('#logo-scroll').addClass('mobile-hidden');
+      $('#btn-scroll').addClass('mobile-hidden');
+      $(window).scroll(function () {
+          if( $(window).scrollTop() > ($('.basic-description').offset().top - 185)){
+            $('#main-header').addClass('plain-background');
+            $('#header-2').addClass('custom-titlebar');
+            $('#logo-scroll').removeClass('mobile-hidden');
+            $('#logo-normal').addClass('mobile-hidden');
+            $('#btn-scroll').removeClass('mobile-hidden');
+            $('#btn-normal').addClass('mobile-hidden');
+          } else {
+            $('#main-header').removeClass('plain-background');
+            $('#header-2').removeClass('custom-titlebar');
+            $('#logo-normal').removeClass('mobile-hidden');
+            $('#logo-scroll').addClass('mobile-hidden');
+            $('#btn-normal').removeClass('mobile-hidden');
+            $('#btn-scroll').addClass('mobile-hidden');
+          }
+      });
+      
+    </script>
 </html>

@@ -22,29 +22,37 @@
       <div class="main-background2">
         <div class="">
 
-            <div class="navbar fixed-top navbar-light p-0" role="navigation">
+            <div class="navbar fixed-top py-0" id="main-header" role="navigation">
               
               <div class="display-inline-block  pl-3">
-                <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+                <button class="btn pull-left top-menu-white" id="btn-normal" data-toggle="collapse" data-target="#menu">
+                  <!-- <div src="static/svg/menu.svg" /> -->
+                </button>
+                <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="collapse" data-target="#menu">
                   <!-- <div src="static/svg/menu.svg" /> -->
                 </button>
               </div>
 
               <div class="main-logo-center">
-                <img class="main-logo-green" src="static/img/greenr-logo-white-sm.svg"/>
+                <img class="main-logo-green" id="logo-normal" src="static/img/greenr-logo-white-sm.svg"/>
+                <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.png"/>
               </div>
 
               <div class="pull-right">
                 <div>
-                  <button class="top-instagram">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
+                  <a href="https://www.instagram.com/begreenr/">
+                    <button class="top-instagram">
+                    <!-- <div src="static/svg/menu.svg" /> -->
+                    </button>
+                  </a>
                 </div>
 
                 <div>
-                  <button class="top-facebook">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                  </button>
+                  <a href="https://www.facebook.com/begreenr/">
+                    <button class="top-facebook">
+                    <!-- <div src="static/svg/menu.svg" /> -->
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -116,7 +124,7 @@
           </div>
       </div>
 
-      <div class="description-header">
+      <div class="description-header" id="header-2">
         <div class="description-heading-brand">GREENR</div>
         <div class="description-heading-body">PHILOSOPHY</div>
       </div>
@@ -260,6 +268,25 @@
       $('#collapseOne').on('hidden.bs.collapse', function () {
         $('#collapseOne').collapse('show')
       })
+      $('#logo-scroll').addClass('mobile-hidden');
+      $('#btn-scroll').addClass('mobile-hidden');
+      $(window).scroll(function () {
+          if( $(window).scrollTop() > ($('.basic-description').offset().top - 185)){
+            $('#main-header').addClass('plain-background');
+            $('#header-2').addClass('custom-titlebar');
+            $('#logo-scroll').removeClass('mobile-hidden');
+            $('#logo-normal').addClass('mobile-hidden');
+            $('#btn-scroll').removeClass('mobile-hidden');
+            $('#btn-normal').addClass('mobile-hidden');
+          } else {
+            $('#main-header').removeClass('plain-background');
+            $('#header-2').removeClass('custom-titlebar');
+            $('#logo-normal').removeClass('mobile-hidden');
+            $('#logo-scroll').addClass('mobile-hidden');
+            $('#btn-normal').removeClass('mobile-hidden');
+            $('#btn-scroll').addClass('mobile-hidden');
+          }
+      });
       // function keepFirstOpen(accordionGroup) {
       //   // console.log(accordionGroup);
       //   var openCount = 0;
