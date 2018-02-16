@@ -129,7 +129,7 @@
         <div class="description-heading-body">PHILOSOPHY</div>
       </div>
 
-      <div class="basic-description">
+      <div class="basic-description" id="basic-description">
         <div class="main-description-container blue-left">
           <div class="plantmeats-heading">
             Plantmeats = plant based proteins + superherbs + superfoods 
@@ -278,6 +278,7 @@
             $('#logo-normal').addClass('mobile-hidden');
             $('#btn-scroll').removeClass('mobile-hidden');
             $('#btn-normal').addClass('mobile-hidden');
+            $('#basic-description').addClass('extra-header-offset');
           } else {
             $('#main-header').removeClass('plain-background');
             $('#header-2').removeClass('custom-titlebar');
@@ -285,6 +286,7 @@
             $('#logo-scroll').addClass('mobile-hidden');
             $('#btn-normal').removeClass('mobile-hidden');
             $('#btn-scroll').addClass('mobile-hidden');
+            $('#basic-description').removeClass('extra-header-offset');
           }
       });
       // function keepFirstOpen(accordionGroup) {

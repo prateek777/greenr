@@ -78,7 +78,11 @@
           position: fixed;
           top: 0;
           width: 60%;
-          z-index: 9999;
+          z-index: 10000;
+        }
+
+        .extra-header-offset {
+          margin-top: 110px;
         }
 
         .spanner {
@@ -275,6 +279,7 @@
         .basic-description {
           padding-bottom: 60px;
           padding-right: 60px;
+          /*color: #183E4E;*/
         }
 
         .more-about-btn-container {
@@ -737,24 +742,6 @@
       .menu-item-container {
         padding: 20px 0px;
       }
-
-      <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
-          <div class="display-inline-block  pl-3"> 
-            <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
-              <!-- <div src="static/svg/menu.svg" /> -->
-            </button>
-          </div>
-
-          <div class="main-logo-center">
-            <img class="main-logo-green" src="static/img/greenr-logo-green.png"/>
-          </div>
-
-          <div class="center-header">
-            RETAIL
-          </div>
-          
-        </div>
-
 
       .menu-items {
         padding-left: 0px;
