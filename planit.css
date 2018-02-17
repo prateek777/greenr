@@ -30,7 +30,7 @@
 }
 
 .planit-container .planit-controls {
-    display: inline-block;
+    display: none;
     position: absolute;
     left: 5px;
     top: 5px;
