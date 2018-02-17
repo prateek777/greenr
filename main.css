@@ -21,6 +21,11 @@
             background-size: cover;
         }
 
+        .main-background2.planit-container {
+          width: inherit;
+          margin: 0;
+        }
+
         .plain-background {
           background-color: #fff;
         }
