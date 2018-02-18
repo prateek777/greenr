@@ -24,7 +24,7 @@
 
         <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
           <div class="display-inline-block  pl-3"> 
-            <button class="btn pull-left top-menu" data-toggle="collapse" data-target="#menu">
+            <button class="btn pull-left top-menu" data-toggle="toggle" data-target="#menu">
               <!-- <div src="static/svg/menu.svg" /> -->
             </button>
           </div>
@@ -42,11 +42,11 @@
       </div>
 
       <!-- Menu -->
-      <div id="menu" class="panel panel-default panel-collapse collapse">
+      <div id="menu" class="">
           <div class="menu-container">
             <div class="menu-header-container">
               <div class="close-button-container">
-                <button class="menu-close-button" data-toggle="collapse" data-target="#menu">
+                <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
                 </button>
               </div>
               <div class="menu-logo-container">
@@ -189,6 +189,12 @@
     </body>
 
     <script>
+      $("[data-toggle='toggle']").click(function() {
+          console.log($(this), 'got here');
+          var selector = $(this).data("target");
+          $(selector).toggleClass('in');
+      });
+    
     	$("#event-image").css("position", "relative");
 		window.fbAsyncInit = function() {
 		FB.init({

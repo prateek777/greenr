@@ -13,14 +13,15 @@
 
     <body>
       <div class="main-background">
-        <div class="main-background-gradient">
+        <div class="main-background-wrapper">
 
             <div class="navbar fixed-top  py-0" id="main-header" role="navigation">
                   
-              <button class="btn pull-left top-menu-white" id="btn-normal" data-toggle="collapse" data-target="#menu">
+              <button class="btn pull-left top-menu-white" id="btn-normal" data-toggle="toggle" data-target="#menu">
                 <!-- <div src="static/svg/menu.svg" /> -->
               </button>
-              <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="collapse" data-target="#menu">
+              
+              <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
                 <!-- <div src="static/svg/menu.svg" /> -->
               </button>
 
@@ -56,11 +57,11 @@
       </div>
 
       <!-- Menu -->
-      <div id="menu" class="panel panel-default panel-right panel-collapse collapse">
+      <div id="menu" class="">
           <div class="menu-container">
             <div class="menu-header-container">
               <div class="close-button-container">
-                <button class="menu-close-button" data-toggle="collapse" data-target="#menu">
+                <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
                 </button>
               </div>
               <div class="menu-logo-container">
@@ -167,9 +168,11 @@
           </div>
 
           <div class="more-about-btn-container">
-            <button class="more-about-btn">
-              MORE ABOUT PLATMEATS
-            </button>
+            <a href="plantmeat.html">
+              <button class="more-about-btn">
+                MORE ABOUT PLATMEATS
+              </button>
+            </a>
           </div>
         </div>
 
@@ -263,6 +266,12 @@
       </div>
     </body>
     <script type="text/javascript">
+      $("[data-toggle='toggle']").click(function() {
+          console.log($(this), 'got here');
+          var selector = $(this).data("target");
+          $(selector).toggleClass('in');
+      });
+
       $('#logo-scroll').addClass('mobile-hidden');
       $('#btn-scroll').addClass('mobile-hidden');
       $(window).scroll(function () {

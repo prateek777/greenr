@@ -26,6 +26,10 @@
           margin: 0;
         }
 
+        .height-original {
+          height: 802px;
+        }
+
         .plain-background {
           background-color: #fff;
         }
@@ -33,6 +37,12 @@
         .main-background-gradient {
               height: 802px;
               background: linear-gradient(to bottom, rgba(23, 62, 79, 0.2), rgba(23, 62, 79, 0.4) 50%, rgba(23, 62, 79, 0.2));
+              background-size: cover;
+              position: relative;
+        }
+
+        .main-background-wrapper {
+              height: 802px;
               background-size: cover;
         }
 
@@ -79,15 +89,24 @@
         }
 
         #menu {
+          -webkit-transition: width 300ms ease;
+          -moz-transition: width 300ms ease;
+          -o-transition: width 300ms ease;
+          transition: width 300ms ease;
           background: hsla(1,0%,100%,1);
           position: fixed;
           top: 0;
-          width: 60%;
+          width: 0px;
           z-index: 10000;
+          overflow: hidden;
+        }
+
+        #menu.in {
+          width: 60%;
         }
 
         .extra-header-offset {
-          margin-top: 110px;
+          margin-top: 90px;
         }
 
         .spanner {
@@ -116,6 +135,10 @@
           cursor:pointer;
         }
 
+        a {
+          cursor:pointer;
+        }
+
         .top-facebook {
           background: url(static/img/fb.svg) no-repeat;
           padding: 0.675rem .75rem;
@@ -132,7 +155,11 @@
         }
 
         @media screen and (min-width: 480px) {
-          #menu {
+          /*#menu {
+            width: 50%;
+          }*/
+
+          #menu.in {
             width: 50%;
           }
 
@@ -148,12 +175,15 @@
         
 
         .center-header {
+
+          font-size: 16px;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 4px;
           color: white;
-          /*background-color: ;*/
           background: #183E4E;
-          padding: 25px;
+          padding: 10px;
           text-align: center;
-          font-size: 20px;
           font-weight: 500;
           flex-basis: 100%;
         }
@@ -308,6 +338,7 @@
           top: -5px;
           left: -19px;
           border: none;
+          cursor: pointer;
         }
         
 
@@ -335,6 +366,44 @@
           }
         }
         
+        .interaction-section {
+          background-color: rgba(23, 62, 79, 0.4);
+          max-width: 100%;
+          padding: 10px 20px;
+          color: #ffffff;
+          position: absolute;
+          bottom: 0;
+          font-family: Avenir;
+        }
+
+        .btn-interaction-wrapper {
+          width: 100%;
+        }
+
+        .btn-interaction {
+          border: solid 2px #ffffff;
+          background: none;
+          width: inherit;
+          margin: 20px 0;
+          padding: 10px;
+
+          font-size: 16px;
+          font-weight: 900;
+          letter-spacing: 4px;
+          text-align: center;
+        }
+
+        .interaction-hashtag {
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 1.8;
+        }
+
+        .interaction-description {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.43;
+        }
 
         .statistics-text {
           padding: 20px 48px;
@@ -365,6 +434,15 @@
 
         .statistics-items {
           display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+          .interaction-section {
+            position: relative;
+            top: 40vh;
+            max-width: 600px;
+            padding: 60px;
+          }
         }
 
         @media screen and (min-width: 480px) {
@@ -757,6 +835,11 @@
         top: 90px;
         width: 100%;
         z-index: 9999;
+
+      }
+
+      .navbar.fixed-top {
+        
       }
 
       button:focus {
