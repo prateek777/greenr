@@ -15,32 +15,28 @@
       <div class="main-background">
         <div class="main-background-wrapper">
 
-            <div class="navbar fixed-top  py-0" id="main-header" role="navigation">
-                  
-              <button class="btn pull-left top-menu-white" id="btn-normal" data-toggle="toggle" data-target="#menu">
-                <!-- <div src="static/svg/menu.svg" /> -->
-              </button>
+            <div class="navbar fixed-top  py-0 translucent-header-background" id="main-header" role="navigation">
               
               <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
                 <!-- <div src="static/svg/menu.svg" /> -->
               </button>
 
               <div class="main-logo-center">
-                <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.png"/>
+                <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.svg"/>
               </div>
 
               <div class="pull-right">
-                <div>
+                <div class="social-icon-container">
                   <a href="https://www.instagram.com/begreenr/">
-                    <button class="top-instagram">
+                    <button class="instagram top-instagram top-instagram-green">
                     <!-- <div src="static/svg/menu.svg" /> -->
                     </button>
                   </a>
                 </div>
 
-                <div>
+                <div class="social-icon-container">
                   <a href="https://www.facebook.com/begreenr/">
-                    <button class="top-facebook">
+                    <button class="facebook top-facebook top-facebook-green">
                     <!-- <div src="static/svg/menu.svg" /> -->
                     </button>
                   </a>
@@ -64,10 +60,7 @@
                 <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
                 </button>
               </div>
-              <div class="menu-logo-container">
-                <div class="greenr-menu-logo">
-                </div>
-              </div>  
+                
             </div>
             
             <div class="menu-items">
@@ -273,23 +266,21 @@
       });
 
       $('#logo-scroll').addClass('mobile-hidden');
-      $('#btn-scroll').addClass('mobile-hidden');
       $(window).scroll(function () {
-          if( $(window).scrollTop() > ($('.basic-description').offset().top - 185)){
+          if( $(window).scrollTop() > ($('.basic-description').offset().top - 159)){
             $('#main-header').addClass('plain-background');
+            $('#main-header').removeClass('translucent-header-background');
             $('#header-2').addClass('custom-titlebar');
             $('#logo-scroll').removeClass('mobile-hidden');
             $('#logo-normal').addClass('mobile-hidden');
-            $('#btn-scroll').removeClass('mobile-hidden');
-            $('#btn-normal').addClass('mobile-hidden');
             $('#basic-description').addClass('extra-header-offset');
+            
           } else {
             $('#main-header').removeClass('plain-background');
+            $('#main-header').addClass('translucent-header-background');
             $('#header-2').removeClass('custom-titlebar');
             $('#logo-normal').removeClass('mobile-hidden');
             $('#logo-scroll').addClass('mobile-hidden');
-            $('#btn-normal').removeClass('mobile-hidden');
-            $('#btn-scroll').addClass('mobile-hidden');
             $('#basic-description').removeClass('extra-header-offset');
           }
       });

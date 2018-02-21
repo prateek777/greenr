@@ -34,6 +34,10 @@
           background-color: #fff;
         }
 
+        .translucent-header-background {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+
         .main-background-gradient {
               height: 802px;
               background: linear-gradient(to bottom, rgba(23, 62, 79, 0.2), rgba(23, 62, 79, 0.4) 50%, rgba(23, 62, 79, 0.2));
@@ -64,8 +68,9 @@
         }
 
         .main-logo-green {
-          height: 70px;
-          width: 300px;
+          height: 30px;
+          width: 160px;
+          margin: -15px 0 0px;
         }
 
 
@@ -115,16 +120,23 @@
             color: white;
         }
 
+        .social-icon-container {
+          display: inline-block;
+        }
+
         .top-menu {
-          background: url(static/svg/menu.svg) no-repeat center;
-          background-size: 25px;
-          padding: 0.975rem .75rem;
+          background: url(static/img/menu-icon.svg) no-repeat center;
+          background-size: 35px 26px;
+          padding: 22px;
+          margin: 15px 0 0;
+          outline: none;
         }
 
         .top-menu-white {
-          background: url(static/img/menu-white.svg) no-repeat center;
-          background-size: 25px;
-          padding: 0.975rem .75rem;
+          background: url(static/img/menu-icon.svg) no-repeat center;
+          background-size: 35px 26px;
+          margin: 20px 0 0;
+          padding: 22px;
           outline: none;
         }
 
@@ -135,6 +147,17 @@
           cursor:pointer;
         }
 
+        .top-instagram-green {
+          background: url(static/img/insta-green.svg) no-repeat;
+          padding: 14px;
+          border: none;
+          cursor:pointer;
+        }
+
+        .navbar-side-padding {
+          padding-right: 1rem;
+        }
+
         a {
           cursor:pointer;
         }
@@ -142,6 +165,13 @@
         .top-facebook {
           background: url(static/img/fb.svg) no-repeat;
           padding: 0.675rem .75rem;
+          border: none;
+          cursor:pointer;
+        }
+
+        .top-facebook-green {
+          background: url(static/img/fb-green.svg) no-repeat;
+          padding: 14px;
           border: none;
           cursor:pointer;
         }
@@ -236,7 +266,7 @@
           max-width: 1200px;
           background-color: #f8f8f8;
           padding: 60px;
-          margin-bottom: 40px;
+          margin: 20px 0 40px;
         }
 
         @media screen and (min-width: 480px) {
@@ -259,7 +289,7 @@
             max-width: 1200px;
             background-color: #f8f8f8;
             padding: 60px;
-            margin-bottom: 40px;
+            margin: 20px 0 40px;
           }
         }
 
@@ -281,17 +311,17 @@
         }
 
         .community {
-          background: url(static/img/community.png) no-repeat left 0px;
+          background: url(static/img/star.svg) no-repeat left 0px;
           background-size: 50px;
         }
 
         .self {
-          background: url(static/img/self.png) no-repeat left 0px;
+          background: url(static/img/circle.svg) no-repeat left 0px;
           background-size: 50px;
         }
 
         .nature {
-          background: url(static/img/nature.png) no-repeat left 0px;
+          background: url(static/img/tree.svg) no-repeat left 0px;
           background-size: 50px;
         }
 
@@ -381,16 +411,7 @@
         }
 
         .btn-interaction {
-          border: solid 2px #ffffff;
-          background: none;
-          width: inherit;
-          margin: 20px 0;
-          padding: 10px;
-
-          font-size: 16px;
-          font-weight: 900;
-          letter-spacing: 4px;
-          text-align: center;
+          display: none;
         }
 
         .interaction-hashtag {
@@ -403,6 +424,7 @@
           font-size: 14px;
           font-weight: 500;
           line-height: 1.43;
+          margin-bottom: 45px;
         }
 
         .statistics-text {
@@ -443,6 +465,7 @@
             max-width: 600px;
             padding: 60px;
           }
+
         }
 
         @media screen and (min-width: 480px) {
@@ -458,6 +481,24 @@
           .statistics-text-right {
             display: inline-block;
             text-align: right;
+          }
+
+          .btn-interaction {
+            border: solid 2px #ffffff;
+            background: none;
+            width: inherit;
+            margin: 20px 0;
+            padding: 10px;
+
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-align: center;
+            display: block;
+          }
+
+          .interaction-description {
+            margin-bottom: 0;
           }
         }
 
@@ -814,7 +855,7 @@
       }
 
       .menu-container {
-        padding: 32px 0 100% 16px;
+        padding: 20px 0 100% 16px;
       }
 
       .menu-header-container {
@@ -832,7 +873,7 @@
 
       .custom-titlebar {
         position: fixed;
-        top: 90px;
+        top: 60px;
         width: 100%;
         z-index: 9999;
 
@@ -852,6 +893,10 @@
         font-family: Avenir;
         font-size: 24px;
         font-weight: 500;
+        color: #173e4f;
+      }
+
+      .menu-item:hover { 
         color: #173e4f;
       }
 
