@@ -439,7 +439,8 @@
         }
 
         .stats-head-row2 {
-          font-size: 24px;
+          font-size: 20px;
+          letter-spacing: 4px;
           font-weight: 500;
         }
 
@@ -717,7 +718,7 @@
       }
 
       .description-plain {
-        max-width: 500px;
+        max-width: 900px;
         color: #183E4E;
         text-align: center;
         margin: 20px auto;
@@ -856,11 +857,10 @@
 
       .menu-container {
         padding: 20px 0 100% 16px;
+        position: relative;
       }
 
       .menu-header-container {
-        /*padding: 10px 0;*/
-        height: 120px;
       }
 
       .menu-item-container {
@@ -922,7 +922,10 @@
 
       .menu-address-container {
         padding: 30px 30px 0 0;
-        display: block;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        bottom: 45vh;
       }
 
       .greenr-menu-logo {
@@ -942,8 +945,8 @@
           padding-left: 60px;
         }
         .menu-address-container {
-          padding: 30px 30px 0 60px;
-          display: block;
+          padding: 30px 60px 0;
+          display: flex;
         }
 
         .greenr-menu-logo {
@@ -958,7 +961,7 @@
       .menu-cafe-address {
         display: inline-block;
         text-align: left;
-        float: left;
+        flex-basis: 50%;
       }
 
       .menu-co-address {
@@ -968,12 +971,12 @@
         .menu-co-address {
           display: inline-block;
           text-align: right;
-          float: right;
+          flex-basis: 50%;
         }
       }
 
       .top-level-menu-margin {
-        margin-top: 170px;
+        margin-top: 130px;
       }
 
       .event-image {

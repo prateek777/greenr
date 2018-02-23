@@ -160,17 +160,17 @@
                 <div class='accordion-subgroup col-sm-6'>
                   <button class="accordion-btn btn-descriptor-item first" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   </button>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   </button>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   </button>
                 </div>
                 <div class='accordion-subgroup col-sm-6'>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                   </button>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                   </button>
-                  <button class="accordion-btn btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                   </button>
                 </div>
               </div>
@@ -294,7 +294,7 @@
         p = planit.new({
           container: 'planit',
           image: {
-            url: 'static/img/rectangle-4.jpg',
+            url: 'static/img/rectangle-4@2x.jpg',
             zoom: true,
           },
           markers: [
@@ -341,32 +341,20 @@
             }
           ],
           markerDragEnd: function(event, marker) {
-            // console.log(marker.position());
-            // console.log(marker.coords());
+            
           },
           markerClick: function(event, marker) {
-            // console.log(marker.position());
             marker.animateInfobox()
             p.centerOn(marker.position());
-            // console.log(marker.Coords())
             console.log(marker.infoboxVisible())
             if (marker.infoboxVisible()) {
-              console.log('got here ?')
               marker.hideInfobox();
             } else {
               setTimeout(marker.showInfobox, 250);
-              // marker.hideInfobox();  
-              // console.log(marker.infoboxVisible())
             }
-            
-            // console.log(marker.position());
-
           },
           canvasClick: function(event, coords) {
-            // console.log(coords);
-            // console.log(marker.coords());
             p.zoomTo(0);
-
           }
         });
 
@@ -374,10 +362,36 @@
         window.scrollTo(0, 0);
       }
 
+      // $('div[id^="collapse]').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      //   // $("div[data-target='collapseOne']").addClass('collapsed')
+      // })
+
       $('#collapseOne').on('hidden.bs.collapse', function () {
         $('#collapseOne').collapse('show')
       })
-      // $('#logo-scroll').addClass('mobile-hidden');
+
+      $('#collapseTwo').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+
+      $('#collapseThree').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+
+      $('#collapseFour').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+
+      $('#collapseFive').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+
+      $('#collapseSix').on('hidden.bs.collapse', function () {
+        $('#collapseOne').collapse('show')
+      })
+      
+
       $(window).scroll(function () {
           if( $(window).scrollTop() > ($('.basic-description').offset().top - 159)){
             $('#main-header').addClass('plain-background');
