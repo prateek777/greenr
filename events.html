@@ -10,10 +10,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="main.css"/>
         <script
-		  src="http://code.jquery.com/jquery-3.3.1.min.js"
-		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		  crossorigin="anonymous">
-		</script>
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
 
         
 
@@ -67,7 +67,7 @@
                 <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
                 </button>
               </div>
-               
+                
             </div>
             
             <div class="menu-items">
@@ -125,32 +125,52 @@
         </div>
       </div>
  -->
-      <div class="events top-level-menu-margin">
-      	<div id="valid-event">
-	      	<div class="event-image" id="event-image">
-	      	</div>
-	      	<div class="center-header event-header" id="event-header">
-	            
-	        </div>
-	        <div class="invite-description-container">
-			        <div class="event-description" id="event-description">
-			        	
-			        </div>
-			        <div class="more-about-btn-container">
-			        	<a id="event-link">
-				            <button class="more-about-btn">
-				              Attend this event
-				            </button>
-				        </a>
-			        </div>
-		    </div>
-		</div>
-		<div id="invalid-event">
-			<div class="invite-description-container">
-			    <div class="event-description" id="noevent-description">
-			    </div>
-			</div>
-		</div>      	
+      <div class="events top-level-menu-margin" style="min-height: 53vh;">
+        <div id="valid-event">
+          <div class="event-image" id="event-image">
+          </div>
+          <div class="center-header event-header" id="event-header">
+            
+            <button class="arrow-left">
+
+            </button>
+
+            <div class="event-details-container">
+              <div class="event-name" id="event-name">
+              </div>
+              <div class="event-timings" id="event-timings">
+              </div>
+            </div>
+
+            <button class="arrow-right">
+            </button>
+          </div>
+          <div class="invite-description-container">
+              <div class="event-description" id="event-description">
+                
+              </div>
+              <div class="more-about-btn-container">
+                <a id="event-link">
+                    <button class="more-about-btn">
+                      Attend this event
+                    </button>
+                </a>
+              </div>
+        </div>
+    </div>
+    <div id="invalid-event">
+      <div class="invite-description-container">
+          <div class="event-description" id="noevent-description">
+          </div>
+          <div class="more-about-btn-container">
+            <a id="event-link">
+                <button class="more-about-btn">
+                  Greenr on Facebook
+                </button>
+            </a>
+          </div>
+      </div>
+    </div>        
       </div>
 
       <div class="footer-container">
@@ -204,51 +224,111 @@
     </body>
 
     <script>
+      var event_number = 0
+      var events = []
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' };
+      $(".arrow-right")[0].onclick = null;
+      
+      $(".arrow-left")[0].onclick = null;
+
+      $('#valid-event').css('display', 'none');
+      $('#invalid-event').css('display', 'none');
+      function formatDate() {
+        var monthNames = [
+          "January", "February", "March",
+          "April", "May", "June", "July",
+          "August", "September", "October",
+          "November", "December"
+        ];
+        date = new Date(); 
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+        var dateStr = year + '-' + (monthIndex+1) + '-' + day;
+        console.log(dateStr)
+        return '2018-2-10';
+      }
+
       $("[data-toggle='toggle']").click(function() {
-          console.log($(this), 'got here');
           var selector = $(this).data("target");
           $(selector).toggleClass('in');
       });
-    
-    	$("#event-image").css("position", "relative");
-		window.fbAsyncInit = function() {
-		FB.init({
-		  appId            : '1912273135754917',
-		  autoLogAppEvents : true,
-		  xfbml            : true,
-		  version          : 'v2.12'
-		});
+      function populateEvent(data) {
+        if(data.cover) {
+          $('#event-image').css('background', 'url('+ data.cover.source + ') center/150px no-repeat');
+          $('#event-image').css('background-size', 'contain');
+          $('#event-image').addClass('event-image');  
+        }
+        if(data.name) {
+          $('#event-name').html(data.name)
+        }
+        if(data.start_time) {
+          $('#event-timings').html((new Date(data.start_time)).toLocaleDateString("en-US",options) + (' | ' + data.place.name || '') + (data.place.location && (', ' + data.place.location.city || '')))
+        }
+        if(data.description) {
+          $('#event-description').html(data.description)
+        }
+        if(data.id) {
+          $('#event-link').attr("href", 'https://www.facebook.com/events/' + data.id)
+        }
+      }
 
-		FB.api(
-		  '/141841699831498/events',
-		  'GET',
-		  {
-		    "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description",
-		    "access_token": "1912273135754917|2OawwizLXmwFdnkRAUmxjgb956U"
-		  },
-		  function(response) {
-		    console.log(response);
-		    if (response.data) {
-		    	$('#event-image').css('background', 'url('+ response.data[0].cover.source + ') center/150px no-repeat');
-			    $('#event-image').addClass('event-image');
-			    $('#event-header').html(response.data[0].name + '<br>' + response.data[0].start_time)
-			    $('#event-description').html(response.data[0].description)
-			    $('#event-link').attr("href", 'https://www.facebook.com/events/' + response.data[0].id)
-			} else {
-				$('#valid-event').css('display', 'none');
-				$('#noevent-description').html("Sorry We don't have any events right for now, but keep checking this space and our facebook page for more.");
-			}
-		  }
-		);
-		};
+      $("#event-image").css("position", "relative");
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '1912273135754917',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.12'
+        });
 
-		(function(d, s, id){
-		 var js, fjs = d.getElementsByTagName(s)[0];
-		 if (d.getElementById(id)) {return;}
-		 js = d.createElement(s); js.id = id;
-		 console.log('jhi');
-		 js.src = "https://connect.facebook.net/en_US/sdk.js";
-		 fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
+      
+        
+        FB.api(
+          '/502271293254118/events',
+          'GET',
+          {
+            "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description",
+            "access_token": "1912273135754917|2OawwizLXmwFdnkRAUmxjgb956U",
+            // "since": formatDate(),
+          },
+          function(response) {
+            console.log(response);
+
+            if (response.data && response.data.length) {
+              $('#invalid-event').css('display', 'none');
+              $('#valid-event').css('display', 'inherit');
+              events = response.data
+              populateEvent(response.data[0])
+            } else {
+              $('#valid-event').css('display', 'none');
+              $('#invalid-event').css('display', 'inherit');
+              $('#noevent-description').html("Sorry We don't have any events right for now, but keep checking this space and our facebook page for more.");
+              $('#event-link').attr("href", 'https://www.facebook.com/502271293254118/')
+            }
+        });
+      };
+
+      $(".arrow-left").click(function() {
+        if (event_number > 0 && events.length) {
+          event_number -= 1
+          populateEvent(events[event_number])
+        }
+      });
+      $(".arrow-right").click(function() {
+        if (events.length && event_number < (events.length -1)) {
+          event_number += 1
+          populateEvent(events[event_number])
+        }
+      });
+
+      (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       console.log('jhi');
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
 </html>

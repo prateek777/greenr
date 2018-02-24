@@ -1,6 +1,6 @@
         body {
           font-family: Avenir;
-          min-height: 100vh;
+          /*min-height: 100vh;*/
         }
 
         @font-face {
@@ -211,7 +211,7 @@
           line-height: normal;
           letter-spacing: 4px;
           color: white;
-          background: #183E4E;
+          background: #173e4f;
           padding: 10px;
           text-align: center;
           font-weight: 500;
@@ -350,8 +350,7 @@
         .more-about-btn-container {
           border: #183E4E solid 1px;
           width: 265px;
-          margin-top: 30px;
-          margin-left: 12px;
+          margin: 30px auto;
         }
 
         .more-about-btn {
@@ -415,7 +414,7 @@
         }
 
         .interaction-hashtag {
-          font-size: 40px;
+          font-size: 32px;
           font-weight: 900;
           line-height: 1.8;
         }
@@ -462,7 +461,7 @@
         @media screen and (min-width: 768px) {
           .interaction-section {
             position: relative;
-            top: 40vh;
+            top: 30vh;
             max-width: 600px;
             padding: 60px;
           }
@@ -719,7 +718,7 @@
 
       .description-plain {
         max-width: 900px;
-        color: #183E4E;
+        color: #173e4f;
         text-align: center;
         margin: 20px auto;
       }
@@ -732,66 +731,87 @@
         background-color: #fafafa;
       }
 
-      .brand1 {
-        background: #f2f2f2 url("static/img/fs-logo.jpg") center no-repeat;
+      .earth-loaf {
+        background: url("static/img/earth-loaf@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand2 {
-        background: #fafafa url("static/img/fs-logo.jpg") center no-repeat;
+      .blue-tokai {
+        background: url("static/img/earth-loaf@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand3 {
-        background: #f2f2f2 url("static/img/fs-logo.jpg") center no-repeat;
+      .clive {
+        background: url("static/img/clive@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand4 {
-        background: #fafafa url("static/img/fs-logo.jpg") center no-repeat;
+      .sleepy-owl {
+        background: url("static/img/sleepy-owl@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand5 {
-        background: #f2f2f2 url("static/img/fs-logo.jpg") center no-repeat;
+      .my-greens {
+        background: url("static/img/my-greens@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand6 {
-        background: #fafafa url("static/img/fs-logo.jpg") center no-repeat;
+      .ausum-tea {
+        background: url("static/img/ausum-tea@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand7 {
-        background: #f2f2f2 url("static/img/fs-logo.jpg") center no-repeat;
+      .yogis {
+        background: url("static/img/yogis@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand8 {
-        background: #fafafa url("static/img/fs-logo.jpg") center no-repeat;
+      .indian-origins {
+        background: url("static/img/indian-origins@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
         outline: none;
       }
 
-      .brand9 {
-        background: #f2f2f2 url("static/img/fs-logo.jpg") center no-repeat;
+      .the-gourmet-jar {
+        background: url("static/img/the-gourmet-jar@2x.jpg") center no-repeat;
         padding: 90px;
-        background-size: 90px;
+        background-size: 120px;
+        outline: none;
+      }
+
+      .nutreen {
+        background: url("static/img/nutreen@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 120px;
+        outline: none;
+      }
+
+      .tea-trunk {
+        background: url("static/img/tea-trunk@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 120px;
+        outline: none;
+      }
+
+      .tbh {
+        background: url("static/img/tbh@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 120px;
         outline: none;
       }
 
@@ -804,7 +824,7 @@
       }
 
       .team-item-description {
-        max-width: 100%;
+        max-width: 700px;
         font-size: 24px;
         font-weight: 300;
       }
@@ -816,12 +836,29 @@
       .team-item-description-container {
         flex-basis: 50%;
         margin: auto;
-        padding: 60px;
+        padding: 70px;
       }
 
+      .alternate-description {
+        background-color: inherit;
+      }
+
+      .team-name {
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      .team-about {
+        font-size: 20px; 
+      }
+
+      .team-email {
+        font-weight: bold;
+        font-size: 20px; 
+      }
       @media screen and (min-width: 1070px) {
         .team-item-description-container {
-          padding: 20px;
+          padding: 70px;
         }
       }
 
@@ -836,6 +873,7 @@
       .team-item {
         display: flex;
         flex-direction: column;
+        background-color: #f2f2f2;
       }
 
       @media screen and (min-width: 1070px) {
@@ -847,11 +885,13 @@
       .team-item-reverse {
         display: flex;
         flex-direction: column;
+        text-align: left;
       }
 
       @media screen and (min-width: 1070px) {
         .team-item-reverse {
           flex-direction: row-reverse;
+          text-align: right;
         }
       }
 
@@ -869,6 +909,56 @@
 
       .menu-items {
         padding-left: 0px;
+        padding-top: 40px;
+      }
+
+      .community-section {
+        margin: 20px auto;
+        padding: 0 20px;
+        max-width: 900px;
+        text-align: center;
+      }
+
+      .community-heading {
+        font-size: 16px;
+        border-bottom: 1px solid #173E4E;
+        margin: 10px 0;
+      }
+
+      .community-description {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+
+      .community-image {
+        height: 110px;
+        max-width: 300px;
+      }
+
+      @media screen and (min-width: 480px) {
+
+        .community-section {
+          margin: 50px auto;
+          padding: 0 20px;
+          max-width: 900px;
+          text-align: center;
+        }
+
+        .community-heading {
+          font-size: 36px;
+          border-bottom: 1px solid #173E4E;
+          margin: 20px 0;
+        }        
+
+        .community-description {
+          font-size: 16px;
+          margin: 30px 0;
+        }
+
+        .community-image {
+          height: 100%;
+          max-width: 100%;
+        }
       }
 
       .custom-titlebar {
@@ -923,9 +1013,9 @@
       .menu-address-container {
         padding: 30px 30px 0 0;
         display: flex;
-        position: absolute;
+        position: relative;
         width: 100%;
-        bottom: 45vh;
+        top: 250px;
       }
 
       .greenr-menu-logo {
@@ -935,12 +1025,23 @@
         height: 40px;
         width: 100px;
       }
+
+      .planit-container .planit-markers-container .planit-marker.hotspot {
+        background: url(static/img/hotspot-icon.svg) no-repeat;
+        /*background-size: 24px;
+        padding: 40px;
+        height: 40px;*/
+      }
       
       .mobile-hidden {
         display: none;
       }
 
-      @media screen and (min-width: 480px) {
+      .tablet-hidden {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
         .menu-items {
           padding-left: 60px;
         }
@@ -979,9 +1080,118 @@
         margin-top: 130px;
       }
 
+      .events {
+        min-height: 53vh;
+      }
+
       .event-image {
         /*background-position: center;
         background-repeat: no-repeat;
         background-size: 150px;*/
         padding: 100px;
+      }
+
+      .event-name {
+        font-size: 36px;
+      }
+
+      .event-timings {
+        padding: 10px;
+      }
+
+      .event-description {
+        padding: 0 20px;
+      }
+      .event-header {
+        padding: 20px;
+      }
+
+      .retail-brands {
+      }
+
+      .brand {
+        display: inline-block;
+        width: 99%;
+      }
+
+      .event-details-container {
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 100px;
+      }
+
+      @media screen and (min-width: 480px) {
+        .brand {
+          display: inline-block;
+          width: 49%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .brand {
+          display: inline-block;
+          width: 24%;
+        }
+        .event-details-container {
+          display: inline-block;
+          max-width: 500px;
+        }
+      }
+
+      @media screen and (min-width: 1070px) {
+        .brand {
+          display: inline-block;
+          width: 24%;
+        }
+        .event-details-container {
+          display: inline-block;
+          max-width: 900px;
+        }
+      }
+
+      .infobox-heading {
+        font-family: Avenir;
+        font-size: 24px;
+        font-weight: 900;
+        color: #173e4f;
+      }
+
+      ul {
+        padding: 0 20px;
+      }
+
+      .card-body-custom {
+        max-width: 1200px;
+      }
+
+      
+
+      .arrow-left {
+        border: none;
+        display: inline-block;
+        background: url(static/img/arrow-left.png) no-repeat;
+        background-size: 100%;
+        padding: 40px;
+        height: 90px;
+        float: left;
+      }
+
+      .arrow-right {
+        border: none;
+        display: inline-block;
+        background: url(static/img/arrow-right.png) no-repeat;
+        background-size: 100%;
+        padding: 40px;
+        height: 90px;
+        float: right;
+      }
+
+      .infobox-close {
+        background: url(static/img/close-info.svg) no-repeat;
+        background-size: 100%;
+        padding: 10px;
+        height: 20px;
+        border: none;
+        position: relative;
+        top: -20px;
+        left: -20px;
       }

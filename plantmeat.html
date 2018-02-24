@@ -63,7 +63,7 @@
             </div>
             <div class="interaction-section">
               <div class="interaction-hashtag">
-                #PLANTMEAT
+                Leading the #PlantPro Revolution
               </div>
               <div class="interaction-description">
                 GREENR Cafe is one of India's first modern eateries to be inspired by #Plantpro. Plant pro is a significant development in the food industry which is enabling complex plant-based proteins to become mainstream and give both vegetarians and non-vegetarians nutritious, delicious, and sustainable alternatives to meat.
@@ -177,49 +177,49 @@
 
               <div class="card no-border">
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs1</div>
-                    “1You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">Shroomballs</div>
+                    Oh the goodness of Mushrooms and the earthiness of Himalayan Red Kidney Beans! Brown rice, Spinach & Sunflower Seeds; all add even more protein and an element of surprise to these delicious Shroomballs/mince.
                   </div>
                 </div>
               </div>
               <div class="card no-border">
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs2</div>
-                    “2You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">BeanPro</div>
+                    Black- eyed Peas, Mushrooms, and Brown Rice dance together in this vegan and dense protein. In combination with our homemade Worcestershire Sauce, you may forget that you are still eating plants!
                   </div>
                 </div>
               </div>
               <div class="card no-border">
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs3</div> 
-                    “3You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">PeaPro</div> 
+                    Bountiful Green Peas are mashed together for this native protein which may remind you of Delhi's kebabs!
                   </div>
                 </div>
               </div>
               <div class="card no-border">
                 <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs4</div>
-                    “4You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">Tofu Amaranth</div>
+                    Both Tofu and Amaranth are considered complete proteins in themselves. With this powerhouse mixture, get your protein fix and enjoy the nuttiness and wholesomeness of this 8000 year old grain. Did we mention that this also has Flax Seeds?!
                   </div>
                 </div>
               </div>
               <div class="card no-border">
                 <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs5</div>
-                    “5You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">Hemproot</div>
+                    Hemp seeds are considered one of nature's best sources of plant based protein. The seeds contain essential fats and proteins that your body needs to maintain your overall health. Combined with the nutritional powerhouse Beetroot, this Plant Pro abounds in health and taste.
                   </div>
                 </div>
               </div>
               <div class="card no-border">
                 <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    <div class="item-heading">Meatless Meatballs6</div>
-                    “6You are what you eat” goes the old adage. At GREENR, we live this truth. We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette.
+                  <div class="card-body card-body-custom">
+                    <div class="item-heading">Sweet Potato Falafel</div>
+                    Our take on the classic, the high protein chickpea based Falafel gets a superfood boost with the addition of Sweet Potatoes. This balanced protein is not just a nutritional wonder, but also improves on the timeless Falafel.
                   </div>
                 </div>
               </div>
@@ -286,7 +286,7 @@
           var selector = $(this).data("target");
           $(selector).toggleClass('in');
       });
-
+      var p = null;
       function startInteraction() {
         // $('#btn-interaction').hide();
         $('#background-gradient').removeClass('main-background-gradient');
@@ -294,51 +294,131 @@
         p = planit.new({
           container: 'planit',
           image: {
-            url: 'static/img/rectangle-4@2x.jpg',
+            url: 'static/img/plantmeat_interaction.jpg',
             zoom: true,
+            draggable: true,
           },
           markers: [
             {
-              coords: ['12','45'],
+              coords: ['2','40'],
               draggable: false,
               infobox: {
-                html: "<h2>Dingle</h2><p>It's the dinkus.</p>",
+                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli</li></ul></div>",
                 position: 'top',
                 arrow: true
               },
-              class: "cheese bucket",
-              color: "#CEA052",
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
               size: 40
             },
             {
-              coords: ['45','62'],
+              coords: ['22','65'],
               draggable: false,
               infobox: {
-                html: "<h2>Dangle</h2><p>It's the other dinkus.</p>",
-                position: 'left',
+                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
+                position: 'top',
                 arrow: true
-              }
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
             },
             {
-              coords: ['64.21','22'],
+              coords: ['29','65'],
               draggable: false,
               infobox: {
-                html: "<h2>Dangle</h2><p>It's the other dinkus.</p>",
-                position: 'bottom',
+                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Chickpeas</div><div class='infobox-details'><ul><li>Is a rich source of protein and minerals, zinc and manganese.</li><li>There is 15 gms of protein in every 100 gms of chickpeas</li><li>Chickpeas is used as a main protein/ingredient in sweet potato falafel.</li></ul></div>",
+                position: 'top',
                 arrow: true
-              }
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
             },
             {
-              coords: ['64.21','72'],
+              coords: ['45.5','47'],
               draggable: false,
               infobox: {
-                html: "<h2>Dangle</h2><p>It's the other dinkus.</p>",
-                position: 'bottom-right',
-                arrow: false,
-                offsetX: -10,
-                offsetY: -10
-              }
-            }
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Mushroom</div><div class='infobox-details'><ul><li>Cooked mushroom is a good source of protein, vitamin c and iron.</li><li>The only vegetable rich in vitamin D. A cooked ½ cup mushroom contains approximately 6 grams of proteins.</li><li> Mushroom is used in shroomballs (Red Kidney Beans is one of the key ingredients also.)</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['49','35'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Kale</div><div class='infobox-details'><ul><li>About Kale</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['55','65'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Black Eyed Peas</div><div class='infobox-details'><ul><li>In North India, black-eyed peas are called lobia or rongi and is cooked like daal and served with boiled rice.</li><li>½ cup of black eyed peas contains 6.7 grams of protein. It’s also rich in fibre, potassium, and iron.</li><li>Black eyed peas as a main protein/ingredient in bean vegan sausage.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['60','40'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['70','50'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Sweet Potato</div><div class='infobox-details'><ul><li>About Sweet Potatoe</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['86','32'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Peas</div><div class='infobox-details'><ul><li>Peas is a frost-hardy, cool-season vegetable that can be grown throughout the world.</li><li>Low in calorie, easily digested and very high in protein. It’s also known as the ‘Non- Dairy Muscle Builder’. ½ cup of peas contains 6.5 grams of protein.</li><li>Peas is used as a main protein/ingredient in pea pro.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['94','44'],
+              draggable: false,
+              infobox: {
+                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
           ],
           markerDragEnd: function(event, marker) {
             
@@ -346,22 +426,36 @@
           markerClick: function(event, marker) {
             marker.animateInfobox()
             p.centerOn(marker.position());
-            console.log(marker.infoboxVisible())
-            if (marker.infoboxVisible()) {
-              marker.hideInfobox();
-            } else {
+            // if (marker.infoboxVisible) {
+            //   marker.hideInfobox();
+            // } else {
               setTimeout(marker.showInfobox, 250);
-            }
+            // }
           },
-          canvasClick: function(event, coords) {
-            p.zoomTo(0);
-          }
         });
-
+        p.canvasClick = function(event, coords) {
+            markers = p.getAllMarkers();
+            for (var i =0; i< markers.length; i++) {
+              markers[i].hideInfobox();
+            }
+            p.zoomTo(0);
+            // for (var i =0; i< markers.length; i++) {
+            //   markers[i].hideInfobox();
+            // }
+        }
+        
         $('.planit-controls').addClass("hidden");
         window.scrollTo(0, 0);
       }
 
+      $(".infobox-close").onclick = null;
+      $(".infobox-close").click(function() {
+        markers = p.getAllMarkers();
+        for (var i =0; i< markers.length; i++) {
+          markers[i].hideInfobox();
+        }
+        console.log(markers)
+      });
       // $('div[id^="collapse]').on('hidden.bs.collapse', function () {
       //   $('#collapseOne').collapse('show')
       //   // $("div[data-target='collapseOne']").addClass('collapsed')
