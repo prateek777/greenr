@@ -341,17 +341,17 @@
         }
 
         .community {
-          background: url(static/img/star.svg) no-repeat left 0px;
+          background: url(static/img/star.svg) no-repeat center left 0px;
           background-size: 50px;
         }
 
         .self {
-          background: url(static/img/circle.svg) no-repeat left 0px;
+          background: url(static/img/circle.svg) no-repeat center left 0px;
           background-size: 50px;
         }
 
         .nature {
-          background: url(static/img/tree.svg) no-repeat left 0px;
+          background: url(static/img/tree.svg) no-repeat center left 0px;
           background-size: 50px;
         }
 
@@ -698,6 +698,18 @@
           font-weight: 500;
         }
 
+        .shroomballs {
+          background: url("static/img/shroomballs.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .shroomballs {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
+
         .bean {
           background: url("static/img/bean.svg") left no-repeat;
           padding: 30px 0;
@@ -819,6 +831,7 @@
         color: #173e4f;
         text-align: center;
         margin: 20px auto;
+        padding: 0 30px;
       }
 
       .background-dark-gray {
@@ -1176,11 +1189,13 @@
       }
 
       .top-level-menu-margin {
-        margin-top: 130px;
+        margin-top: 97px;
       }
 
       .events {
-        min-height: 53vh;
+        min-height: 200px;
+        clear:both;
+        /*padding: 1px;*/
       }
 
       .event-image {
@@ -1290,7 +1305,7 @@
       .arrow-left {
         border: none;
         display: inline-block;
-        background: url(static/img/arrow-left.png) no-repeat center;
+        background: url(static/img/arrow-left.svg) no-repeat center;
         background-size: 24px 24px;
         padding: 10px;
         height: 90px;
@@ -1300,7 +1315,7 @@
       .arrow-right {
         border: none;
         display: inline-block;
-        background: url(static/img/arrow-right.png) no-repeat center;
+        background: url(static/img/arrow-right.svg) no-repeat center;
         background-size: 24px 24px;
         padding: 10px;
         height: 90px;
@@ -1309,13 +1324,13 @@
 
       @media screen and (min-width: 480px) {
         .arrow-left {
-          background: url(static/img/arrow-left.png) no-repeat center;
+          background: url(static/img/arrow-left.svg) no-repeat center;
           background-size: 48px 48px;
           padding: 40px;
         }
 
         .arrow-right {
-          background: url(static/img/arrow-right.png) no-repeat center;
+          background: url(static/img/arrow-right.svg) no-repeat center;
           background-size: 48px 48px;
           padding: 40px;
         }
@@ -1408,7 +1423,7 @@
       }
 
       .menucard-section {
-        margin: 0 auto;
+        margin: 20px auto 0;
       }
 
       .menucard {
@@ -1561,4 +1576,9 @@
         font-weight: 500;
         width: 100%;
         text-align: center;
+      }
+
+      .opaque-arrows {
+        -webkit-filter: opacity(50%);
+        filter: opacity(50%);
       }

@@ -176,6 +176,10 @@
             
           // },
           markerClick: function(event, marker) {
+            markers = p.getAllMarkers();
+            for (var i =0; i< markers.length; i++) {
+              markers[i].hideInfobox();
+            }
             // marker.animateInfobox()
             // p.centerOn(marker.position());
             // console.log(marker.infoboxVisible());
@@ -418,7 +422,7 @@
               <div class="accordion-group row">
                 <div class='accordion-subgroup col-sm-6'>
                   <button class="accordion-btn btn-descriptor-item first" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="bean">
+                    <div class="shroomballs">
                     </div>
                   </button>
                   <button class="accordion-btn collapsed btn-descriptor-item" onclick="this.blur();" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">

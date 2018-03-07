@@ -125,7 +125,7 @@
         </div>
       </div>
  -->
-      <div class="events top-level-menu-margin" style="min-height: 53vh;">
+      <div class="events top-level-menu-margin" style="min-height: 200px; clear: both;">
         <div id="valid-event">
           <div style="text-align: center">
             <img class="event-image" id="event-image">
@@ -245,8 +245,7 @@
         var monthIndex = date.getMonth();
         var year = date.getFullYear();
         var dateStr = year + '-' + (monthIndex+1) + '-' + day;
-        console.log(dateStr)
-        return '2018-2-10';
+        return dateStr;
       }
 
       $("[data-toggle='toggle']").click(function() {
@@ -291,7 +290,7 @@
           {
             "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description",
             "access_token": "1912273135754917|2OawwizLXmwFdnkRAUmxjgb956U",
-            // "since": formatDate(),
+            "since": formatDate(),
           },
           function(response) {
             console.log(response);
@@ -299,7 +298,14 @@
             if (response.data && response.data.length) {
               $('#invalid-event').css('display', 'none');
               $('#valid-event').css('display', 'inherit');
-              events = response.data
+              events = response.data && response.data.reverse();
+              if (!(event_number > 0 && events.length)) {
+                $(".arrow-left").addClass('opaque-arrows');
+              }
+
+              if(!(events.length && event_number < (events.length -1))) {
+                $(".arrow-right").addClass('opaque-arrows');
+              }
               populateEvent(response.data[0])
             } else {
               $('#valid-event').css('display', 'none');
@@ -313,13 +319,27 @@
       $(".arrow-left").click(function() {
         if (event_number > 0 && events.length) {
           event_number -= 1
+          $(".arrow-right").removeClass('opaque-arrows');
+          if (!(event_number > 0 && events.length)) {
+            $(".arrow-left").addClass('opaque-arrows');
+          }
           populateEvent(events[event_number])
+        }
+        else{
+          $(".arrow-left").addClass('opaque-arrows');
         }
       });
       $(".arrow-right").click(function() {
         if (events.length && event_number < (events.length -1)) {
           event_number += 1
+          $(".arrow-left").removeClass('opaque-arrows');
+          if(!(events.length && event_number < (events.length -1))) {
+            $(".arrow-right").addClass('opaque-arrows');
+          }
           populateEvent(events[event_number])
+        }
+        else{
+          $(".arrow-right").addClass('opaque-arrows');
         }
       });
 
