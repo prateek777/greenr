@@ -127,9 +127,8 @@
  -->
       <div class="events top-level-menu-margin" style="min-height: 53vh;">
         <div id="valid-event">
-          <div>
-            <div class="event-image" id="event-image">
-            </div>
+          <div style="text-align: center">
+            <img class="event-image" id="event-image">
           <div class="center-header event-header" id="event-header">
             
             <button class="arrow-left">
@@ -256,8 +255,9 @@
       });
       function populateEvent(data) {
         if(data.cover) {
-          $('#event-image').css('background', 'url('+ data.cover.source + ') center/150px no-repeat');
-          $('#event-image').css('background-size', '400px 400px');
+          // $('#event-image').css('background', 'url('+ data.cover.source + ') center/150px no-repeat');
+          // $('#event-image').css('background-size', '400px 400px');
+          $("#event-image").attr("src", data.cover.source);
           $('#event-image').addClass('event-image');  
         }
         if(data.name) {

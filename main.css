@@ -147,6 +147,7 @@
           padding: 22px;
           margin: 7px 0;
           outline: none;
+          border: none;
         }
 
         .top-menu-white {
@@ -271,8 +272,9 @@
         }
 
         .invite-description-container {
-          margin-left: 20px;
+          margin: 0 20px;
           padding-top: 30px;
+          text-align: center;
         }
 
         .plantmeats-heading {
@@ -294,7 +296,7 @@
           }
 
           .invite-description-container {
-            margin-left: 88px;
+            margin: 0 88px;
             padding-top: 30px;
           }
 
@@ -392,8 +394,7 @@
           .more-about-btn-container {
             border: #183E4E solid 1px;
             width: 305px;
-            margin-top: 30px;
-            margin-left: 12px;
+            margin: 30px auto;
           }
 
           .more-about-btn {
@@ -674,18 +675,77 @@
           font-weight: 500;
         }
 
+        .bean {
+          background: url("static/img/bean.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .bean {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
+
+        .pea {
+          background: url("static/img/pea.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .pea {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
+
+        .pea2 {
+          background: url("static/img/pea2.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .pea2 {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
+
+        .root {
+          background: url("static/img/root.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .root {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
+
+        .tofu {
+          background: url("static/img/tofu.svg") left no-repeat;
+          padding: 30px 0;
+          background-size: 35px;
+          /*outline: none;*/
+        }
+
+        .collapsed .tofu {
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+        }
 
         .btn-descriptor-item {
-          background: url("static/img/descriptor-item.png") left no-repeat;
-          padding: 30px;
+          background: url("static/img/toggle-open.svg") left no-repeat;
+          padding: 30px 12px;
           border: none;
           background-size: 60px;
           outline: none;
         }
 
         .btn-descriptor-item.collapsed {
-          background: url("static/img/descriptor-item-open.png") left no-repeat;
-          padding: 30px;
+          background: url("static/img/toggle-close.svg") left no-repeat;
+          padding: 30px 12px;
           border: none;
           background-size: 60px;
           outline: none;
@@ -694,8 +754,8 @@
         
 
         .btn-descriptor-item.first.collapsed {
-          background: url("static/img/descriptor-item-open.png") left no-repeat;
-          padding: 30px;
+          background: url("static/img/toggle-close.svg") left no-repeat;
+          padding: 30px 12px;
           border: none;
           background-size: 60px;
           outline: none;
@@ -978,7 +1038,7 @@
 
       .custom-titlebar {
         position: fixed;
-        top: 60px;
+        top: 58px;
         width: 100%;
         z-index: 9999;
 
@@ -991,6 +1051,7 @@
       button:focus {
         outline: none;
         cursor:pointer;
+        border: none;
       }
 
 
@@ -1030,7 +1091,7 @@
         display: flex;
         position: relative;
         width: 100%;
-        top: 250px;
+        top: 100px;
       }
 
       .greenr-menu-logo {
@@ -1100,14 +1161,35 @@
       }
 
       .event-image {
-        /*background-position: center;
-        background-repeat: no-repeat;
-        background-size: 150px;*/
-        padding: 100px;
+        /*padding: 100px;*/
+        height: 300px;
+        max-width: 300px;
       }
 
+      @media screen and (min-width: 768px) {
+        .event-image {
+          /*padding: 100px;*/
+          height: 400px;
+          max-width: 700px;
+        }
+      }
       .event-name {
-        font-size: 36px;
+        font-size: 16px;
+      }
+
+      .event-timings {
+        padding: 10px;
+        font-size: 10px;
+      }
+
+      @media screen and (min-width: 1070px) {
+        .event-name {
+          font-size: 36px;
+        } 
+
+        .event-timings {
+          font-size: 16px;
+        }
       }
 
       .event-timings {
@@ -1132,7 +1214,7 @@
       .event-details-container {
         word-wrap: break-word;
         display: inline-block;
-        max-width: 100px;
+        max-width: 200px;
       }
 
       @media screen and (min-width: 480px) {
@@ -1185,9 +1267,9 @@
       .arrow-left {
         border: none;
         display: inline-block;
-        background: url(static/img/arrow-left.png) no-repeat;
-        background-size: 100%;
-        padding: 40px;
+        background: url(static/img/arrow-left.png) no-repeat center;
+        background-size: 24px 24px;
+        padding: 10px;
         height: 90px;
         float: left;
       }
@@ -1195,11 +1277,25 @@
       .arrow-right {
         border: none;
         display: inline-block;
-        background: url(static/img/arrow-right.png) no-repeat;
-        background-size: 100%;
-        padding: 40px;
+        background: url(static/img/arrow-right.png) no-repeat center;
+        background-size: 24px 24px;
+        padding: 10px;
         height: 90px;
         float: right;
+      }
+
+      @media screen and (min-width: 480px) {
+        .arrow-left {
+          background: url(static/img/arrow-left.png) no-repeat center;
+          background-size: 48px 48px;
+          padding: 40px;
+        }
+
+        .arrow-right {
+          background: url(static/img/arrow-right.png) no-repeat center;
+          background-size: 48px 48px;
+          padding: 40px;
+        }
       }
 
       .infobox-close {
