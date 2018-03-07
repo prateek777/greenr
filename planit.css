@@ -99,8 +99,9 @@
 .planit-container .planit-infobox-container .planit-infobox {
     position: absolute;
     display: none;
-    min-width: 200px;
-    max-width: 80%;
+    width: 240px;
+    border: solid 1px #173e4f;
+    /*max-width: 80%;*/
     z-index: 998;
     padding: 5px 15px;
     cursor: initial;

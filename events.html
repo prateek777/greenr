@@ -35,7 +35,7 @@
 
           <div class="pull-right navbar-side-padding">
             <div class="social-icon-container">
-              <a href="https://www.instagram.com/begreenr/">
+              <a href="https://www.instagram.com/begreenr/" target="_blank">
                 <button class="instagram top-instagram top-instagram-green">
                 <!-- <div src="static/svg/menu.svg" /> -->
                 </button>
@@ -43,7 +43,7 @@
             </div>
 
             <div class="social-icon-container">
-              <a href="https://www.facebook.com/begreenr/">
+              <a href="https://www.facebook.com/begreenr/" target="_blank">
                 <button class="facebook top-facebook top-facebook-green">
                 <!-- <div src="static/svg/menu.svg" /> -->
                 </button>
@@ -73,7 +73,7 @@
             <div class="menu-items">
               <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
               <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
-              <div class="menu-item-container"><a class="menu-item" data-toggle="collapse" data-target="#menu">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
               <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
               <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
               <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
@@ -127,8 +127,9 @@
  -->
       <div class="events top-level-menu-margin" style="min-height: 53vh;">
         <div id="valid-event">
-          <div class="event-image" id="event-image">
-          </div>
+          <div>
+            <div class="event-image" id="event-image">
+            </div>
           <div class="center-header event-header" id="event-header">
             
             <button class="arrow-left">
@@ -256,7 +257,7 @@
       function populateEvent(data) {
         if(data.cover) {
           $('#event-image').css('background', 'url('+ data.cover.source + ') center/150px no-repeat');
-          $('#event-image').css('background-size', 'contain');
+          $('#event-image').css('background-size', '400px 400px');
           $('#event-image').addClass('event-image');  
         }
         if(data.name) {

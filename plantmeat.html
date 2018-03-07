@@ -21,60 +21,323 @@
         <link href="planit.css" rel="stylesheet">
         <script src="modernizr-2.8.3.min.js"></script>
         <script src="planit.js"></script>
+
+        <script type="text/javascript">
+
+      // $("[data-toggle='toggle']").click(function() {
+      //     console.log($(this), 'got here');
+      //     var selector = $(this).data("target");
+      //     $(selector).toggleClass('in');
+      // });
+
+      var p = null;
+      // $("[data-toggle='infobox']").click(function() {
+      //   e.preventDefault();
+      //   console.warn('sdasdasd');
+      //   markers = p.getAllMarkers();
+      //   for (var i =0; i< markers.length; i++) {
+      //     markers[i].hideInfobox();
+      //   }
+      //   console.warn(markers);
+      // });
+      function startInteraction() {
+        // $('#btn-interaction').hide();
+        // $('#background-gradient').removeClass('main-background-gradient');
+        $('.interaction-section').hide();
+        p = planit.new({
+          container: 'planit',
+          image: {
+            url: 'static/img/rectangle-4.jpg',
+            zoom: false,
+          },
+          markers: [
+            {
+              coords: ['2','40'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button> <div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli</li></ul></div>",
+                position: 'right',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['22','65'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button> <div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['29','65'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button> <div class='infobox-heading'>Chickpeas</div><div class='infobox-details'><ul><li>Is a rich source of protein and minerals, zinc and manganese.</li><li>There is 15 gms of protein in every 100 gms of chickpeas</li><li>Chickpeas is used as a main protein/ingredient in sweet potato falafel.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['45.5','47'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Mushroom</div><div class='infobox-details'><ul><li>Cooked mushroom is a good source of protein, vitamin c and iron.</li><li>The only vegetable rich in vitamin D. A cooked ½ cup mushroom contains approximately 6 grams of proteins.</li><li> Mushroom is used in shroomballs (Red Kidney Beans is one of the key ingredients also.)</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['49','35'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Kale</div><div class='infobox-details'><ul><li>About Kale</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['55','65'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Black Eyed Peas</div><div class='infobox-details'><ul><li>In North India, black-eyed peas are called lobia or rongi and is cooked like daal and served with boiled rice.</li><li>½ cup of black eyed peas contains 6.7 grams of protein. It’s also rich in fibre, potassium, and iron.</li><li>Black eyed peas as a main protein/ingredient in bean vegan sausage.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['60','40'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['70','50'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Sweet Potato</div><div class='infobox-details'><ul><li>About Sweet Potatoe</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['86','32'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Peas</div><div class='infobox-details'><ul><li>Peas is a frost-hardy, cool-season vegetable that can be grown throughout the world.</li><li>Low in calorie, easily digested and very high in protein. It’s also known as the ‘Non- Dairy Muscle Builder’. ½ cup of peas contains 6.5 grams of protein.</li><li>Peas is used as a main protein/ingredient in pea pro.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+            {
+              coords: ['94','44'],
+              draggable: false,
+              infobox: {
+                html: "<button onclick='closeInfobox()' class='infobox-close' data-toggle='infobox'> </button><div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
+                position: 'top',
+                arrow: true
+              },
+              class: "hotspot",
+              color: 'rgba(256,256,256,0)',
+              size: 40
+            },
+          ],
+          // markerDragEnd: function(event, marker) {
+            
+          // },
+          markerClick: function(event, marker) {
+            // marker.animateInfobox()
+            // p.centerOn(marker.position());
+            // console.log(marker.infoboxVisible());
+            // if (marker.infoboxVisible()) {
+            //   // p.zoomTo(0);
+            //   marker.hideInfobox();
+
+            // } else {
+              // p.centerOn(marker.position());
+              setTimeout(marker.showInfobox, 250);
+            // }
+          },
+        });
+        p.canvasClick = function(event, coords) {
+            markers = p.getAllMarkers();
+            for (var i =0; i< markers.length; i++) {
+              markers[i].hideInfobox();
+            }
+            p.zoomTo(0);
+            // closeInfobox();
+            // for (var i =0; i< markers.length; i++) {
+            //   markers[i].hideInfobox();
+            // }
+        }
+        
+        $('.planit-controls').addClass("hidden");
+        window.scrollTo(0, 0);
+      }
+
+      function closeInfobox() {
+        // e.preventDefault();
+        console.warn('again');
+        markers = p.getAllMarkers();
+        for (var i =0; i< markers.length; i++) {
+          markers[i].hideInfobox();
+        }
+        // p.zoomTo(0);
+        // console.warn(markers);
+      };
+      // $(".infobox-close").onclick = null;
+      
+      // $('div[id^="collapse]').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      //   // $("div[data-target='collapseOne']").addClass('collapsed')
+      // })
+
+      // $('#collapseOne').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+
+      // $('#collapseTwo').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+
+      // $('#collapseThree').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+
+      // $('#collapseFour').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+
+      // $('#collapseFive').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+
+      // $('#collapseSix').on('hidden.bs.collapse', function () {
+      //   $('#collapseOne').collapse('show')
+      // })
+      
+
+      $(window).scroll(function () {
+          if( $(window).scrollTop() > ($('.basic-description').offset().top - 159)){
+            $('#main-header').addClass('plain-background');
+            $('#main-header').removeClass('translucent-header-background');
+            $('#header-2').addClass('custom-titlebar');
+            // $('#logo-scroll').removeClass('mobile-hidden');
+            // $('#logo-normal').addClass('mobile-hidden');
+            $('#basic-description').addClass('extra-header-offset');
+            
+          } else {
+            $('#main-header').removeClass('plain-background');
+            $('#main-header').addClass('translucent-header-background');
+            $('#header-2').removeClass('custom-titlebar');
+            // $('#logo-normal').removeClass('mobile-hidden');
+            // $('#logo-scroll').addClass('mobile-hidden');
+            $('#basic-description').removeClass('extra-header-offset');
+          }
+      });
+      // function keepFirstOpen(accordionGroup) {
+      //   // console.log(accordionGroup);
+      //   var openCount = 0;
+      //   $('.accordion-btn').each(function(i, button) {
+      //     console.log(button.getAttribute('aria-expanded'))
+      //     if ( button.getAttribute('aria-expanded') === "true" && button.getAttribute('aria-controls') !== "collapseOne") {
+      //       openCount += 1
+      //     }
+      //   });
+      //   console.log(openCount);
+      //   if (openCount === 0) {
+      //     $('.first').attr('aria-expanded', 'true')
+      //     if ($('.first').hasClass('collapsed')) {
+      //       $('.first').removeClass('collapsed');
+      //     }
+      //     $('#collapseOne').show()
+      //     // $('#collapseOne').addClass('show');
+      //   }
+      // }
+    </script>
         
     </head>
 
     <body>
-      <div class="main-background2" id="planit">
-        <div class="main-background-gradient" id="background-gradient">
+      <div class="navbar fixed-top py-0 translucent-header-background" id="main-header" role="navigation">
+        
+        <div class="display-inline-block">
+        
+          <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
+            <!-- <div src="static/svg/menu.svg" /> -->
+          </button>
+        </div>
 
-            <div class="navbar fixed-top py-0 translucent-header-background" id="main-header" role="navigation">
-              
-              <div class="display-inline-block pl-3">
-              
-                <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
-                  <!-- <div src="static/svg/menu.svg" /> -->
-                </button>
-              </div>
+        <div class="main-logo-center">
+          <!-- <img class="main-logo-green" id="logo-normal" src="static/img/greenr-logo-white-sm.svg"/> -->
+          <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.svg"/>
+        </div>
 
-              <div class="main-logo-center">
-                <!-- <img class="main-logo-green" id="logo-normal" src="static/img/greenr-logo-white-sm.svg"/> -->
-                <img class="main-logo-green" id="logo-scroll" src="static/img/greenr-logo-green.svg"/>
-              </div>
+        <div class="pull-right">
+          <div class="social-icon-container">
+            <a href="https://www.instagram.com/begreenr/" target="_blank">
+              <button class="instagram top-instagram top-instagram-green">
+              <!-- <div src="static/svg/menu.svg" /> -->
+              </button>
+            </a>
+          </div>
 
-              <div class="pull-right">
-                <div class="social-icon-container">
-                  <a href="https://www.instagram.com/begreenr/">
-                    <button class="instagram top-instagram top-instagram-green">
-                    <!-- <div src="static/svg/menu.svg" /> -->
-                    </button>
-                  </a>
-                </div>
+          <div class="social-icon-container">
+            <a href="https://www.facebook.com/begreenr/" target="_blank">
+              <button class="facebook top-facebook top-facebook-green">
+              <!-- <div src="static/svg/menu.svg" /> -->
+              </button>
+            </a>
+          </div>
 
-                <div class="social-icon-container">
-                  <a href="https://www.facebook.com/begreenr/">
-                    <button class="facebook top-facebook top-facebook-green">
-                    <!-- <div src="static/svg/menu.svg" /> -->
-                    </button>
-                  </a>
-                </div>
-              </div>
+        </div>
 
-            </div>
-            <div class="interaction-section">
-              <div class="interaction-hashtag">
-                Leading the #PlantPro Revolution
-              </div>
-              <div class="interaction-description">
-                GREENR Cafe is one of India's first modern eateries to be inspired by #Plantpro. Plant pro is a significant development in the food industry which is enabling complex plant-based proteins to become mainstream and give both vegetarians and non-vegetarians nutritious, delicious, and sustainable alternatives to meat.
-              </div>
+      </div>
 
-              <div class="btn-interaction-wrapper">
-                <button class="btn-interaction" onclick="startInteraction()" id="btn-interaction" >
-                  KNOW YOUR PLANTS
-                </button>
-              </div>
-            </div>
+      <div class="main-background main-background2" id="planit">
+        <div class="interaction-section">
+          <div class="interaction-hashtag">
+            #PLANTPRO
+          </div>
+          <div class="interaction-description">
+            GREENR Cafe is one of India's first modern eateries to be inspired by #Plantpro. Plant pro is a significant development in the food industry which is enabling complex plant-based proteins to become mainstream and give both vegetarians and non-vegetarians nutritious, delicious, and sustainable alternatives to meat.
+          </div>
+
+          <div class="btn-interaction-wrapper">
+            <button class="btn-interaction" onclick="startInteraction()" id="btn-interaction" >
+              KNOW YOUR PLANTS
+            </button>
+          </div>
         </div>
       </div>
 
@@ -86,13 +349,13 @@
                 <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
                 </button>
               </div>
-               
+                
             </div>
             
             <div class="menu-items">
               <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
               <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
-              <div class="menu-item-container"><a class="menu-item" data-toggle="collapse" data-target="#menu">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
               <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
               <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
               <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
@@ -280,249 +543,13 @@
         </div>  
       </div>
     </body>
+
     <script type="text/javascript">
       $("[data-toggle='toggle']").click(function() {
-          console.log($(this), 'got here');
-          var selector = $(this).data("target");
-          $(selector).toggleClass('in');
+        console.log($(this), 'got here');
+        var selector = $(this).data("target");
+        $(selector).toggleClass('in');
       });
-      var p = null;
-      function startInteraction() {
-        // $('#btn-interaction').hide();
-        $('#background-gradient').removeClass('main-background-gradient');
-        $('.interaction-section').hide();
-        p = planit.new({
-          container: 'planit',
-          image: {
-            url: 'static/img/plantmeat_interaction.jpg',
-            zoom: true,
-            draggable: true,
-          },
-          markers: [
-            {
-              coords: ['2','40'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['22','65'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['29','65'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button> <div class='infobox-heading'>Chickpeas</div><div class='infobox-details'><ul><li>Is a rich source of protein and minerals, zinc and manganese.</li><li>There is 15 gms of protein in every 100 gms of chickpeas</li><li>Chickpeas is used as a main protein/ingredient in sweet potato falafel.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['45.5','47'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Mushroom</div><div class='infobox-details'><ul><li>Cooked mushroom is a good source of protein, vitamin c and iron.</li><li>The only vegetable rich in vitamin D. A cooked ½ cup mushroom contains approximately 6 grams of proteins.</li><li> Mushroom is used in shroomballs (Red Kidney Beans is one of the key ingredients also.)</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['49','35'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Kale</div><div class='infobox-details'><ul><li>About Kale</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['55','65'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Black Eyed Peas</div><div class='infobox-details'><ul><li>In North India, black-eyed peas are called lobia or rongi and is cooked like daal and served with boiled rice.</li><li>½ cup of black eyed peas contains 6.7 grams of protein. It’s also rich in fibre, potassium, and iron.</li><li>Black eyed peas as a main protein/ingredient in bean vegan sausage.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['60','40'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Brocolli</div><div class='infobox-details'><ul><li>About Brocolli.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['70','50'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Sweet Potato</div><div class='infobox-details'><ul><li>About Sweet Potatoe</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['86','32'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Peas</div><div class='infobox-details'><ul><li>Peas is a frost-hardy, cool-season vegetable that can be grown throughout the world.</li><li>Low in calorie, easily digested and very high in protein. It’s also known as the ‘Non- Dairy Muscle Builder’. ½ cup of peas contains 6.5 grams of protein.</li><li>Peas is used as a main protein/ingredient in pea pro.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-            {
-              coords: ['94','44'],
-              draggable: false,
-              infobox: {
-                html: "<button class='infobox-close'> </button><div class='infobox-heading'>Beans</div><div class='infobox-details'><ul><li>It is low in calories and popularly known throughout India as \‘Rajma\’. <li>½ cup of kidney beans contains approx 8 grams of proteins</li><li>Beans used to make shroomballs.</li></ul></div>",
-                position: 'top',
-                arrow: true
-              },
-              class: "hotspot",
-              color: 'rgba(256,256,256,0)',
-              size: 40
-            },
-          ],
-          markerDragEnd: function(event, marker) {
-            
-          },
-          markerClick: function(event, marker) {
-            marker.animateInfobox()
-            p.centerOn(marker.position());
-            // if (marker.infoboxVisible) {
-            //   marker.hideInfobox();
-            // } else {
-              setTimeout(marker.showInfobox, 250);
-            // }
-          },
-        });
-        p.canvasClick = function(event, coords) {
-            markers = p.getAllMarkers();
-            for (var i =0; i< markers.length; i++) {
-              markers[i].hideInfobox();
-            }
-            p.zoomTo(0);
-            // for (var i =0; i< markers.length; i++) {
-            //   markers[i].hideInfobox();
-            // }
-        }
-        
-        $('.planit-controls').addClass("hidden");
-        window.scrollTo(0, 0);
-      }
-
-      $(".infobox-close").onclick = null;
-      $(".infobox-close").click(function() {
-        markers = p.getAllMarkers();
-        for (var i =0; i< markers.length; i++) {
-          markers[i].hideInfobox();
-        }
-        console.log(markers)
-      });
-      // $('div[id^="collapse]').on('hidden.bs.collapse', function () {
-      //   $('#collapseOne').collapse('show')
-      //   // $("div[data-target='collapseOne']").addClass('collapsed')
-      // })
-
-      $('#collapseOne').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-
-      $('#collapseTwo').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-
-      $('#collapseThree').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-
-      $('#collapseFour').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-
-      $('#collapseFive').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-
-      $('#collapseSix').on('hidden.bs.collapse', function () {
-        $('#collapseOne').collapse('show')
-      })
-      
-
-      $(window).scroll(function () {
-          if( $(window).scrollTop() > ($('.basic-description').offset().top - 159)){
-            $('#main-header').addClass('plain-background');
-            $('#main-header').removeClass('translucent-header-background');
-            $('#header-2').addClass('custom-titlebar');
-            // $('#logo-scroll').removeClass('mobile-hidden');
-            // $('#logo-normal').addClass('mobile-hidden');
-            $('#basic-description').addClass('extra-header-offset');
-            
-          } else {
-            $('#main-header').removeClass('plain-background');
-            $('#main-header').addClass('translucent-header-background');
-            $('#header-2').removeClass('custom-titlebar');
-            // $('#logo-normal').removeClass('mobile-hidden');
-            // $('#logo-scroll').addClass('mobile-hidden');
-            $('#basic-description').removeClass('extra-header-offset');
-          }
-      });
-      // function keepFirstOpen(accordionGroup) {
-      //   // console.log(accordionGroup);
-      //   var openCount = 0;
-      //   $('.accordion-btn').each(function(i, button) {
-      //     console.log(button.getAttribute('aria-expanded'))
-      //     if ( button.getAttribute('aria-expanded') === "true" && button.getAttribute('aria-controls') !== "collapseOne") {
-      //       openCount += 1
-      //     }
-      //   });
-      //   console.log(openCount);
-      //   if (openCount === 0) {
-      //     $('.first').attr('aria-expanded', 'true')
-      //     if ($('.first').hasClass('collapsed')) {
-      //       $('.first').removeClass('collapsed');
-      //     }
-      //     $('#collapseOne').show()
-      //     // $('#collapseOne').addClass('show');
-      //   }
-      // }
     </script>
 
 </html>
