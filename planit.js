@@ -410,6 +410,7 @@ Planit.Plan.Zoomable = (function() {
       width: (this.imagePosition.scale * 100.0) + "%",
       height: 'auto'
     }, 250);
+    
     return this.animateMarkers();
   };
 
@@ -448,7 +449,7 @@ Planit.Plan.Zoomable = (function() {
           }, 250, (function(_this) {
             return function() {
               m.positionInfobox();
-              return m.unhideInfobox();
+              // return m.unhideInfobox();
             };
           })(this));
         })(m));

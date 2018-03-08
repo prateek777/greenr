@@ -30,26 +30,27 @@
 }
 
 .planit-container .planit-controls {
-    display: none;
+    /*display: none;*/
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 95%;
+    top: 80vh;
     z-index: 999;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
 }
 
 .planit-container .planit-controls a.zoom {
     display: block;
-    width: 15px;
-    height: 15px;
-    padding: 5px 5px;
+    /*width: 15px;
+    height: 15px;*/
+    padding: 15px;
     text-decoration: none;
     font-size: 18px;
     line-height: 14px;
     font-weight: 600;
     color: #444;
     text-align: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #173e4f;
 }
 
 .planit-container .planit-controls a.zoom:hover {

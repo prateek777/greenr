@@ -48,7 +48,7 @@
           container: 'planit',
           image: {
             url: 'static/img/rectangle-4.jpg',
-            zoom: false,
+            zoom: true,
           },
           markers: [
             {
@@ -188,7 +188,7 @@
             //   marker.hideInfobox();
 
             // } else {
-              // p.centerOn(marker.position());
+              p.centerOn(marker.position());
               setTimeout(marker.showInfobox, 250);
             // }
           },
@@ -198,14 +198,14 @@
             for (var i =0; i< markers.length; i++) {
               markers[i].hideInfobox();
             }
-            p.zoomTo(0);
+            // p.zoomTo(0);
             // closeInfobox();
             // for (var i =0; i< markers.length; i++) {
             //   markers[i].hideInfobox();
             // }
         }
         
-        $('.planit-controls').addClass("hidden");
+        // $('.planit-controls').addClass("hidden");
         window.scrollTo(0, 0);
       }
 
@@ -216,7 +216,7 @@
         for (var i =0; i< markers.length; i++) {
           markers[i].hideInfobox();
         }
-        // p.zoomTo(0);
+        p.zoomTo(0);
         // console.warn(markers);
       };
       // $(".infobox-close").onclick = null;
