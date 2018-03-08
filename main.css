@@ -1193,7 +1193,7 @@
       }
 
       .events {
-        min-height: 200px;
+        min-height: 63vh;
         clear:both;
         /*padding: 1px;*/
       }
