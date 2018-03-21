@@ -20,6 +20,7 @@
     </head>
 
     <body>
+      <div id="body-fade">
       <div class="plain-background">
 
         <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
@@ -74,7 +75,7 @@
               <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
               <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
               <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
+              <div class="menu-item-container"><a class="menu-item selected" href="events.html">EVENTS</a></div>
               <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
               <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
             </div>
@@ -98,23 +99,7 @@
                   </div>
                 </div>
                 
-                <div class='menu-co-address'>
-                  <div>
-                    416, Gora Street
-                    <br>
-                    Shahpur Jat
-                    <br>
-                    Siri Fort, New Delhi
-                    <br>
-                    110049
-                  </div>
-                  <div class='phone-number'>
-                    +917043575339
-                  </div>
-                  <div class="maps-locations">
-                    Open in Google Maps
-                  </div>
-                </div>
+                
             </div>
           </div>
       </div>
@@ -159,7 +144,7 @@
             <div class="event-description" id="noevent-description">
             </div>
             <div class="more-about-btn-container">
-              <a id="event-link">
+              <a id="event-link" href="https://www.facebook.com/begreenr/" tagret="_blank">
                 <button class="more-about-btn">
                   Greenr on Facebook
                 </button>
@@ -171,51 +156,86 @@
 
       <div class="footer-container">
         <div class="footer">
+          
           <div class="footer-brand">
               <div class="footer-logo"></div>
           </div>
 
           <div class="footer-contact-details">
-            <div class="footer-contact-heading">Cafe & Kitchen | Co - Space</div>
-            <div class="footer-address-container">
-              <div class='footer-cafe-address'>
-                <div>
-                  416, Gora Street
-                  <br>
-                  Shahpur Jat
-                  <br>
-                  Siri Fort, New Delhi
-                  <br>
-                  110049
-                </div>
-                <div class='phone-number'>
-                  +917043575339
-                </div>
-                <div class="maps-locations">
-                  Open in Google Maps
-                </div>
+              <div class="footer-contact-heading">
+                Cafe & Kitchen | Co - Space
               </div>
-              <div class="footer-contact-heading desktop-hidden">Cafe & Kitchen | Co - Space</div>
-              <div class='footer-co-address'>
-                <div>
-                  416, Gora Street
-                  <br>
-                  Shahpur Jat
-                  <br>
-                  Siri Fort, New Delhi
-                  <br>
-                  110049
+              
+              <div class="footer-address-container">
+                
+                <div class='footer-cafe-address'>
+
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
+
                 </div>
-                <div class='phone-number'>
-                  +917043575339
-                </div>
-                <div class="maps-locations">
-                  Open in Google Maps
-                </div>
+
               </div>
+
+          </div>
+
+        </div>  
+      </div>
+      </div>
+      <div id="menu" class="">
+          <div class="menu-container">
+            <div class="menu-header-container">
+              <div class="close-button-container">
+                <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
+                </button>
+              </div>
+                
+            </div>
+            
+            <div class="menu-items">
+              <div class="menu-item-container"><a class="menu-item selected" href="home.html">HOME</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
+            </div>
+
+            <div class="menu-address-container mobile-hidden">
+                <div class='menu-cafe-address'>
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
+                </div>
+                
+                
             </div>
           </div>
-        </div>  
       </div>
     </body>
 
@@ -247,6 +267,7 @@
       $("[data-toggle='toggle']").click(function() {
           var selector = $(this).data("target");
           $(selector).toggleClass('in');
+          $('#body-fade').toggleClass('body-fade');
       });
       function populateEvent(data) {
         if(data.cover) {
@@ -286,7 +307,7 @@
           {
             "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description",
             "access_token": "1912273135754917|2OawwizLXmwFdnkRAUmxjgb956U",
-            "since": formatDate(),
+            // "since": formatDate(),
           },
           function(response) {
             console.log(response);

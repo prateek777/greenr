@@ -1,12 +1,23 @@
         body {
-          font-family: AvenirNext-Regular;
+          font-family: 'Cabin', sans-serif;
           /*min-height: 100vh;*/
           color: #173e4f;
         }
 
+        .body-fade {
+          opacity:    0.7;
+          /*background: #173e4f;*/
+          width:      100%;
+          height:     100%;
+          z-index:    10;
+          top:        0;
+          left:       0;
+          position:   fixed;
+        }
+
         @font-face {
-          font-family: AvenirNext-Regular;
-          src: url(avenir-next-regular.ttf);
+          /*font-family: 'Cabin', sans-serif;*/
+          font-family: 'Cabin', sans-serif;
         }
 
         .main-background {
@@ -111,10 +122,10 @@
         }
 
         #menu {
-          -webkit-transition: width 300ms ease;
-          -moz-transition: width 300ms ease;
-          -o-transition: width 300ms ease;
-          transition: width 300ms ease;
+          -webkit-transition: width 100ms ease;
+          -moz-transition: width 100ms ease;
+          -o-transition: width 100ms ease;
+          transition: width 100ms ease;
           background: hsla(1,0%,100%,1);
           position: fixed;
           top: 0;
@@ -199,7 +210,7 @@
           /*background-color: ;*/
           background: #183E4E url(static/img/leaf.png) no-repeat bottom 0px left 1px;
           background-size: 54px;
-          padding: 25px 0 17px 131px;
+          padding: 25px 0 17px 58px;
         }
 
         @media screen and (min-width: 480px) {
@@ -278,9 +289,17 @@
         }
 
         .move-to-plantmeats-container {
-          margin: 0 20px;
+          margin: 0 0 0 20px;
           padding-top: 30px;
           /*text-align: center;*/
+        }
+
+        @media screen and (min-width: 480px) {
+          .move-to-plantmeats-container {
+            /*margin: 0 20px;*/
+            padding-top: 30px;
+            /*text-align: center;*/
+          }
         }
 
         .plantmeats-heading {
@@ -373,8 +392,16 @@
 
         .basic-description {
           padding-bottom: 60px;
-          padding-right: 60px;
+          padding-right: 20px;
           color: #173e4f;
+        }
+
+        @media screen and (min-width: 480px) {
+          .basic-description {
+            padding-bottom: 60px;
+            padding-right: 60px;
+            color: #173e4f;
+          }
         }
 
         .more-about-btn-container {
@@ -385,15 +412,15 @@
 
         .move-to-btn-container {
           border: #183E4E solid 1px;
-          width: 265px;
+          width: 100%;
           margin: 30px 10px;
         }
 
         .more-about-btn {
-          width: 275px;
+          width: 100%;
           height: 40px;
           background-color: #173e4f;
-          font-family: AvenirNext-Regular;
+          font-family: 'Cabin', sans-serif;
           font-size: 16px;
           font-weight: 900;
           text-align: center;
@@ -424,7 +451,7 @@
             width: 310px;
             height: 40px;
             background-color: #173e4f;
-            font-family: AvenirNext-Regular;
+            font-family: 'Cabin', sans-serif;
             font-size: 16px;
             font-weight: 900;
             text-align: center;
@@ -443,7 +470,7 @@
           color: #ffffff;
           position: absolute;
           bottom: 0;
-          font-family: AvenirNext-Regular;
+          font-family: 'Cabin', sans-serif;
         }
 
         .btn-interaction-wrapper {
@@ -497,6 +524,14 @@
 
         .statistics-items {
           display: block;
+        }
+
+        @media screen and (min-width: 480px) {
+          .statistics-text {
+            padding: 20px 48px 20px 100px;
+            display: block;
+            align-items: center;
+          }
         }
 
         @media screen and (min-width: 768px) {
@@ -600,7 +635,7 @@
         .footer-contact-details {
           padding: 20px 0px 30px 0;
           color: #fff;
-          font-family: AvenirNext-Regular;
+          font-family: 'Cabin', sans-serif;
           font-size: 30px;
           font-weight: 500;
           text-align: center;
@@ -608,7 +643,7 @@
 
         .footer-cafe-address {
           flex-basis: 50%;
-          padding: 10px;
+          padding: 10px 0;
         }
 
         .footer-co-address {
@@ -639,7 +674,7 @@
             display: inline-block;
             float: right;
             color: #fff;
-            font-family: AvenirNext-Regular;
+            font-family: 'Cabin', sans-serif;
             font-size: 30px;
             font-weight: 500;
           }
@@ -831,7 +866,7 @@
         color: #173e4f;
         text-align: center;
         margin: 20px auto;
-        padding: 0 30px;
+        padding: 30px 30px 0;
       }
 
       .background-dark-gray {
@@ -850,9 +885,9 @@
       }
 
       .blue-tokai {
-        background: url("static/img/earth-loaf@2x.jpg") center no-repeat;
+        background: url("static/img/blue-tokai.jpg") center no-repeat;
         padding: 90px;
-        background-size: 180px 111px;
+        background-size: 108px;
         outline: none;
       }
 
@@ -935,17 +970,17 @@
       }
 
       .team-item-description {
-        max-width: 700px;
+        max-width: 750px;
         font-size: 24px;
         font-weight: 300;
       }
 
       .team-item-picture-container {
-        flex-basis: 50%;
+        flex-basis: 40%;
       }
 
       .team-item-description-container {
-        flex-basis: 50%;
+        flex-basis: 60%;
         margin: auto;
         padding: 70px;
       }
@@ -1019,8 +1054,12 @@
       }
 
       .menu-items {
-        padding-left: 0px;
+        padding-left: 30px;
         padding-top: 40px;
+      }
+
+      menu-item:hover {
+        font-weight: bold
       }
 
       .community-section {
@@ -1092,14 +1131,20 @@
 
 
       .menu-item {
-        font-family: AvenirNext-Regular;
+        font-family: 'Cabin', sans-serif;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 100;
         color: #173e4f;
       }
 
       .menu-item:hover { 
         color: #173e4f;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .menu-item.selected {
+       font-weight: 900; 
       }
 
       .close-button-container {
@@ -1201,7 +1246,7 @@
       .event-image {
         /*padding: 100px;*/
         height: 300px;
-        max-width: 300px;
+        max-width: 100%;
       }
 
       @media screen and (min-width: 768px) {
@@ -1284,7 +1329,7 @@
       }
 
       .infobox-heading {
-        font-family: AvenirNext-Regular;
+        font-family: 'Cabin', sans-serif;
         font-size: 24px;
         font-weight: 900;
         color: #173e4f;
@@ -1552,14 +1597,14 @@
       }
 
       .menu-section-heading {
-        font-family: Avenir;
+        font-family: 'Cabin', sans-serif;
         font-size: 24px;
         font-weight: 500;
         line-height: normal;
       }
 
       .menu-section-description {
-        font-family: Avenir;
+        font-family: 'Cabin', sans-serif;
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 10px;

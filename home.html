@@ -4,6 +4,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/> -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin:100,300,400,500,700,900" rel="stylesheet">
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,6 +14,7 @@
     </head>
 
     <body>
+      <div id="body-fade">
       <div class="navbar fixed-top  py-0 translucent-header-background" id="main-header" role="navigation">
         
         <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
@@ -49,64 +52,7 @@
       </div>
 
       <!-- Menu -->
-      <div id="menu" class="">
-          <div class="menu-container">
-            <div class="menu-header-container">
-              <div class="close-button-container">
-                <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
-                </button>
-              </div>
-                
-            </div>
-            
-            <div class="menu-items">
-              <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
-            </div>
-
-            <div class="menu-address-container mobile-hidden">
-                <div class='menu-cafe-address'>
-                  <div>
-                    416, Gora Street
-                    <br>
-                    Shahpur Jat
-                    <br>
-                    Siri Fort, New Delhi
-                    <br>
-                    110049
-                  </div>
-                  <div class='phone-number'>
-                    +917043575339
-                  </div>
-                  <div class="maps-locations">
-                    Open in Google Maps
-                  </div>
-                </div>
-                
-                <div class='menu-co-address'>
-                  <div>
-                    416, Gora Street
-                    <br>
-                    Shahpur Jat
-                    <br>
-                    Siri Fort, New Delhi
-                    <br>
-                    110049
-                  </div>
-                  <div class='phone-number'>
-                    +917043575339
-                  </div>
-                  <div class="maps-locations">
-                    Open in Google Maps
-                  </div>
-                </div>
-            </div>
-          </div>
-      </div>
+      
 
       <div class="description-header" id="header-2">
         <div class="description-heading-brand">GREENR</div>
@@ -116,7 +62,7 @@
       <div class="basic-description" id="basic-description">
         <div class="main-description-container blue-left">
           <div class="description">
-            “You are what you eat” goes the old adage. At GREENR, we live this truth.
+            "You are what you eat" goes the old adage. At GREENR, we live this truth.
             <br>
             We have never been as prosperous as we are today, yet most of us suffer from ill health simply because we eat the wrong food. GREENR is a food initiative to help Indians eat more nutritious, delicious, and sustainable. Yes, it is possible to eat a wholesome vegetarian diet which leaves nothing lacking on the palette. At GREENR, we aspire to create this reality every day.
           </div>
@@ -210,62 +156,95 @@
 
       <div class="footer-container">
         <div class="footer">
+          
           <div class="footer-brand">
               <div class="footer-logo"></div>
           </div>
 
           <div class="footer-contact-details">
-            <div class="footer-contact-heading">Cafe & Kitchen | Co - Space</div>
-            <div class="footer-address-container">
-              <div class='footer-cafe-address'>
-                <div>
-                  416, Gora Street
-                  <br>
-                  Shahpur Jat
-                  <br>
-                  Siri Fort, New Delhi
-                  <br>
-                  110049
-                </div>
-                <div class='phone-number'>
-                  +917043575339
-                </div>
-                <div class="maps-locations">
-                  Open in Google Maps
-                </div>
+              <div class="footer-contact-heading">
+                Cafe & Kitchen | Co - Space
               </div>
-              <div class="footer-contact-heading desktop-hidden">Cafe & Kitchen | Co - Space</div>
-              <div class='footer-co-address'>
-                <div>
-                  416, Gora Street
-                  <br>
-                  Shahpur Jat
-                  <br>
-                  Siri Fort, New Delhi
-                  <br>
-                  110049
+              
+              <div class="footer-address-container">
+                
+                <div class='footer-cafe-address'>
+
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
+
                 </div>
-                <div class='phone-number'>
-                  +917043575339
-                </div>
-                <div class="maps-locations">
-                  Open in Google Maps
-                </div>
+
               </div>
-            </div>
+
           </div>
 
-          <div class="facebook">
-            
-          </div>
         </div>  
       </div>
+      </div>
+      <div id="menu" class="">
+          <div class="menu-container">
+            <div class="menu-header-container">
+              <div class="close-button-container">
+                <button class="menu-close-button" data-toggle="toggle" data-target="#menu">
+                </button>
+              </div>
+                
+            </div>
+            
+            <div class="menu-items">
+              <div class="menu-item-container"><a class="menu-item selected" href="home.html">HOME</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
+              <div class="menu-item-container"><a class="menu-item" href="team.html">TEAM</a></div>
+            </div>
+
+            <div class="menu-address-container mobile-hidden">
+                <div class='menu-cafe-address'>
+                  <div>
+                    416, Gora Street
+                    <br>
+                    Shahpur Jat
+                    <br>
+                    Siri Fort, New Delhi
+                    <br>
+                    110049
+                  </div>
+                  <div class='phone-number'>
+                    +917043575339
+                  </div>
+                  <div class="maps-locations">
+                    Open in Google Maps
+                  </div>
+                </div>
+                
+                
+            </div>
+          </div>
+      </div>
     </body>
+
+    
     <script type="text/javascript">
       $("[data-toggle='toggle']").click(function() {
-          console.log($(this), 'got here');
           var selector = $(this).data("target");
           $(selector).toggleClass('in');
+          $('#body-fade').toggleClass('body-fade');
       });
 
       $('#logo-scroll').addClass('mobile-hidden');
