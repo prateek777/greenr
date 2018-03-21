@@ -6,7 +6,7 @@
 
         .body-fade {
           opacity:    0.7;
-          /*background: #173e4f;*/
+          background: rgba(23,62,79,0.7);
           width:      100%;
           height:     100%;
           z-index:    10;
@@ -737,76 +737,88 @@
           background: url("static/img/shroomballs.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .shroomballs {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .bean {
           background: url("static/img/bean.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .bean {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .pea {
           background: url("static/img/pea.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .pea {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .pea2 {
           background: url("static/img/pea2.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .pea2 {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .root {
           background: url("static/img/root.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .root {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .tofu {
           background: url("static/img/tofu.svg") left no-repeat;
           padding: 30px 0;
           background-size: 35px;
-          /*outline: none;*/
+          -webkit-filter: contrast(0%) brightness(190%);
+          filter: contrast(00%) brightness(190%);
+
         }
 
         .collapsed .tofu {
-          -webkit-filter: contrast(0%) brightness(190%);
-          filter: contrast(00%) brightness(190%);
+          -webkit-filter: none;
+          filter: none;
         }
 
         .btn-descriptor-item {
-          background: url("static/img/toggle-open.svg") left no-repeat;
+          background: url("static/img/toggle-close.svg") left no-repeat;
           padding: 30px 12px;
           border: none;
           background-size: 60px;
@@ -814,7 +826,7 @@
         }
 
         .btn-descriptor-item.collapsed {
-          background: url("static/img/toggle-close.svg") left no-repeat;
+          background: url("static/img/toggle-open.svg") left no-repeat;
           padding: 30px 12px;
           border: none;
           background-size: 60px;
@@ -824,7 +836,7 @@
         
 
         .btn-descriptor-item.first.collapsed {
-          background: url("static/img/toggle-close.svg") left no-repeat;
+          background: url("static/img/toggle-open.svg") left no-repeat;
           padding: 30px 12px;
           border: none;
           background-size: 60px;

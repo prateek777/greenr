@@ -32,23 +32,24 @@
 .planit-container .planit-controls {
     position: absolute;
     left: 90%;
-    top: 80%;
+    top: 77%;
     z-index: 999;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1070px) {
     .planit-container .planit-controls {
         position: absolute;
-        left: 90%;
-        top: 75%;
+        left: 95%;
+        top: 77%;
         z-index: 999;
     }
 }
+
 .planit-container .planit-controls a.zoom {
     display: block;
     /*width: 15px;
     height: 15px;*/
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
     font-size: 10px;
     line-height: 5px;
