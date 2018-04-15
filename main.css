@@ -406,13 +406,12 @@
 
         .more-about-btn-container {
           border: #183E4E solid 1px;
-          width: 265px;
+          width: 100%;
           margin: 30px auto;
         }
 
         .move-to-btn-container {
           border: #183E4E solid 1px;
-          width: 100%;
           margin: 30px 10px;
         }
 
@@ -428,7 +427,7 @@
           margin-top: 0px;
           position: relative;
           top: -5px;
-          left: -19px;
+          left: -7px;
           border: none;
           cursor: pointer;
         }
@@ -571,6 +570,20 @@
             display: block;
           }
 
+          .btn-interaction:hover {
+            border: solid 2px #173e4f;
+            color: #173e4f;
+            background: none;
+            width: inherit;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-align: center;
+            display: block;
+          }
+
           .interaction-description {
             margin-bottom: 0;
           }
@@ -602,9 +615,9 @@
         }
 
         .gases {
-          background: url(static/img/gases.svg) no-repeat center;
+          background: url(static/img/gas.svg) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 100% 135px;
+          background-size: 100% 155px;
           flex-grow: 100;
         }
 
@@ -617,6 +630,26 @@
           border-bottom: 1px solid #ffffff;
           overflow: hidden;
           padding: 0 20px;
+        }
+
+        .maps-locations {
+          color: #173e4f;
+        }
+
+        .maps-locations-white {
+          color: #fff;
+        }
+
+        .maps-locations:hover {
+          color: #173e4f;
+          font-weight: 900;
+          text-decoration: none;
+        }
+
+        .maps-locations-white:hover {
+          color: #fff;
+          font-weight: 900;
+          text-decoration: none;
         }
 
         .footer-brand {
@@ -1279,7 +1312,7 @@
 
       @media screen and (min-width: 1070px) {
         .event-name {
-          font-size: 36px;
+          font-size: 24px;
         } 
 
         .event-timings {
@@ -1292,7 +1325,7 @@
       }
 
       .event-description {
-        padding: 0 20px;
+        /*padding: 0 20px;*/
       }
       .event-header {
         padding: 20px;
@@ -1348,7 +1381,7 @@
       }
 
       ul {
-        padding: 0 20px;
+        padding: 0 0 0 18px;
       }
 
       .card-body-custom {
