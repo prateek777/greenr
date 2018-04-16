@@ -5,8 +5,7 @@
         }
 
         .body-fade {
-          opacity:    0.7;
-          background: rgba(23,62,79,0.7);
+          opacity:    0.3;
           width:      100%;
           height:     100%;
           z-index:    10;
@@ -71,8 +70,8 @@
 
         .main-logo {
             height: 36px;
-            background: url("static/img/greenr-logo-green.svg")  no-repeat center;
-            background-size: 192px 36px;
+            background: url("static/img/greenr-logo-main.svg")  no-repeat center;
+            background-size: 192px 22px;
             flex-basis: 100%;
             /*position: relative;*/
             /*top: -100px;            */
@@ -81,7 +80,7 @@
         @media screen and (min-width: 480px) {
           .main-logo {
             height: 60px;
-            background-size: 320px 60px;
+            background-size: 320px 37px;
           }          
         }
 
@@ -90,7 +89,6 @@
         }
 
         .main-logo-center {
-            padding: 20px 0 0 0;
             margin: 0 auto;
             display: inline-block;
         }
@@ -98,7 +96,6 @@
         .main-logo-green {
           height: 30px;
           width: 160px;
-          margin: -15px 0 0px;
         }
 
 
@@ -472,6 +469,10 @@
           font-family: 'Cabin', sans-serif;
         }
 
+        .interaction-section:hover {
+          background: #173e4f;
+        }
+
         .btn-interaction-wrapper {
           width: 100%;
         }
@@ -541,6 +542,9 @@
 
         }
 
+        .extra-margin {
+          margin: 40px auto 0;
+        }
         @media screen and (min-width: 480px) {
 
           .statistics-text {
@@ -570,20 +574,6 @@
             display: block;
           }
 
-          .btn-interaction:hover {
-            border: solid 2px #173e4f;
-            color: #173e4f;
-            background: none;
-            width: inherit;
-            margin: 20px 0;
-            padding: 10px;
-            font-size: 16px;
-            font-weight: 900;
-            letter-spacing: 4px;
-            text-align: center;
-            display: block;
-          }
-
           .interaction-description {
             margin-bottom: 0;
           }
@@ -602,22 +592,22 @@
         }
 
         .land {
-          background: url(static/img/land.svg) no-repeat center;
+          background: url(static/img/land.png) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 100% 135px;
+          background-size: 40%;
           flex-grow: 100;
         }
 
         .water {
-          background: url(static/img/water.svg) no-repeat center;
-          background-size: 100% 135px;
+          background: url(static/img/water.png) no-repeat center;
+          background-size: 40%;
           flex-grow: 100;
         }
 
         .gases {
-          background: url(static/img/gas.svg) no-repeat center;
+          background: url(static/img/gas.png) no-repeat center;
           background-color: #f8f8f8;
-          background-size: 100% 155px;
+          background-size: 40%;
           flex-grow: 100;
         }
 
@@ -657,10 +647,11 @@
           /*display: block;*/
           margin: 0 auto;
         }
+
         .footer-logo {
-          background: url(static/img/greenr-logo.svg) center no-repeat;
+          background: url(static/img/footer-logo-white.svg) center no-repeat;
           margin: 0 auto;
-          background-size: 170px 30px;
+          background-size: 225px 100px;
           padding: 50px 100px;
         }
         
@@ -754,9 +745,9 @@
           }
 
           .footer-logo {
-            height: 70px;
-            width: 300px;
-            background: url(static/img/greenr-logo.svg) no-repeat;
+            height: 125px;
+            width: 280px;
+            background: url(static/img/footer-logo-white.svg) no-repeat;
             margin: 0 auto;
           }
         }
@@ -1006,6 +997,27 @@
         outline: none;
       }
 
+      .bare-neccessities {
+        background: url("static/img/bare-nec@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 35%;
+        outline: none;
+      }
+
+      .flying-squirell {
+        background: url("static/img/flying-squirell@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 30%;
+        outline: none;
+      }
+
+      .nourish-organics {
+        background: url("static/img/nourish-organics@2x.jpg") center no-repeat;
+        padding: 90px;
+        background-size: 45%;
+        outline: none;
+      }
+
       .team-item-picture {
         /*background: url("static/img/team-item-picture.png") center no-repeat;*/
         max-width: 100%;
@@ -1049,7 +1061,7 @@
       }
       @media screen and (min-width: 1070px) {
         .team-item-description-container {
-          padding: 70px;
+          padding: 0px 70px;
         }
       }
 
@@ -1241,6 +1253,31 @@
 
       .tablet-hidden {
         display: none;
+      }
+
+      .planit-control-footnote {
+        position: absolute;
+        left: 35%;
+        top: 85%;
+        z-index:1;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 10px;
+        line-height: 5px;
+        font-weight: 600;
+        color: #444;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #173e4f;
+      }
+
+      @media screen and (min-width: 768px) {
+        .planit-control-footnote {
+          position: absolute;
+          left: 45%;
+          top: 85%;
+          z-index:1;
+        }      
       }
 
       @media screen and (min-width: 768px) {
@@ -1448,14 +1485,12 @@
         width: 130px;
         height: 400px;
         margin: 0px 20px 0 0;
-        border-radius: 5px;
         position: relative;
       }
 
       .menu-vertical-img {
         width: 130px;
         height: 120px;
-        border-radius: 5px;
         position: relative;
         /*margin-bottom: 20px;*/
       }
@@ -1464,7 +1499,6 @@
         width: 280px;
         height: 260px;
         margin: 0 auto;
-        border-radius: 5px;
         position: relative;
       }
 
@@ -1524,22 +1558,15 @@
       .menu-vertical {
         display: flex;
         flex-direction: column;
-        /*margin-top: 20px;*/
       }
-      
+
       .menu-vertical-item {
         margin-bottom: 20px;
-      } 
-/*
-      .menucard-full {
-        width: 1220px;
-        height: 260px;
-      }*/
+      }
 
       .menucard-small {
         height: 120px;
         margin: 0px 10px 20px;
-        border-radius: 5px;
         position: relative;
       }
 

@@ -362,7 +362,7 @@ Planit.Plan.Zoomable = (function() {
   }
 
   Zoomable.prototype["new"] = function() {
-    this.container.prepend("<div class=\"planit-controls\">\n  <a href=\"#\" class=\"zoom\" data-action=\"in\">+</a>\n  <a href=\"#\" class=\"zoom\" data-action=\"out\">-</a>\n</div>");
+    this.container.prepend("<div class=\"planit-controls\">\n <a href=\"#\" class=\"zoom\" data-action=\"in\">+</a>\n  <a href=\"#\" class=\"zoom\" data-action=\"out\">-</a>\n</div> <div class=\" planit-control-footnote\">Move the map around and click on the gems.</div>");
     this.container.find(".zoom[data-action='in']").click((function(_this) {
       return function(e) {
         e.preventDefault();

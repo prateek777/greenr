@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Cabin:100,300,400,500,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
@@ -18,7 +18,7 @@
 
         <div class="navbar fixed-top plain-background navbar-light p-0" role="navigation">
           <div class="display-inline-block  pl-3"> 
-            <button class="btn pull-left top-menu" data-toggle="toggle" data-target="#menu">
+            <button class="btn pull-left top-menu" id="btn-scroll" data-toggle="toggle" data-target="#menu">
               <!-- <div src="static/svg/menu.svg" /> -->
             </button>
           </div>
@@ -57,13 +57,30 @@
 
     <div class="description-plain-container top-level-menu-margin">
         <div class="description-plain">
-          Greenr Cafe is one of India’s first modern eateries inspired by Californian Vegetarian Cuisine. Even with the largest number of vegetarians in the world, India lacks progressive and innovative
+          We are a community of creative, harmony-loving, like-minded beings from different career fields, who have come together to create Greenr. Here, we value individual expression and teamwork, and believe in taking small but conscious steps towards making our modern world a little more greener!
         </div>
     </div>
 
      <!-- images section begin-->
     <div class="team">
       <div class="team-item">
+        <div class="team-item-picture-container">
+         <img class="team-item-picture" src="static/img/nitin.jpg">
+        </div>
+        <div class="team-item-description-container">
+         <div class="team-item-description">
+            <div>
+              <span class="team-name"> Nitin Dixit </span>
+            </div>
+            <div>
+              <span class="team-about">
+                Co-founder, Strategic Advisor, Product Developer, Supporter. You can reach him at </span>
+              <span class="team-email">nitin@greenr.in</span>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="team-item-reverse alternate-description">
         <div class="team-item-picture-container">
          <img class="team-item-picture" src="static/img/mohit.jpg">
         </div>
@@ -80,7 +97,7 @@
           </div>
         </div>  
       </div>
-      <div class="team-item-reverse alternate-description">
+      <div class="team-item">
         <div class="team-item-picture-container">
          <img class="team-item-picture" src="static/img/malavika.jpg">
         </div>
@@ -97,8 +114,7 @@
           </div>
         </div>  
       </div>
-      </div>
-      <div class="team-item">
+      <div class="team-item-reverse alternate-description">
         <div class="team-item-picture-container">
          <img class="team-item-picture" src="static/img/nandini.jpg">
         </div>
@@ -126,9 +142,6 @@
           </div>
 
           <div class="footer-contact-details">
-              <div class="footer-contact-heading">
-                Cafe & Kitchen | Co - Space
-              </div>
               
               <div class="footer-address-container">
                 
@@ -144,10 +157,10 @@
                     110049
                   </div>
                   <div class='phone-number'>
-                    +917043575339
+                    +919892884388
                   </div>
                   <div>
-                    <a class="maps-locations-white" href="https://www.google.nl/maps/dir/''/greenr+delhi/@28.548497,77.1433147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce2141f89e1e7:0xe7d521cc14a584e6!2m2!1d77.213355!2d28.548515">
+                    <a class="maps-locations-white" target="_blank" target="_blank" href="https://www.google.nl/maps/dir/''/greenr+delhi/@28.548497,77.1433147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce2141f89e1e7:0xe7d521cc14a584e6!2m2!1d77.213355!2d28.548515">
                       Open in Google Maps
                     </a>
                   </div>
@@ -175,7 +188,7 @@
               <div class="menu-item-container"><a class="menu-item" href="home.html">HOME</a></div>
               <div class="menu-item-container"><a class="menu-item" href="plantmeat.html">PLANTMEAT</a></div>
               <div class="menu-item-container"><a class="menu-item" href="cafe.html">CAFE</a></div>
-              <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div>
+              <!-- <div class="menu-item-container"><a class="menu-item" href="events.html">EVENTS</a></div> -->
               <div class="menu-item-container"><a class="menu-item" href="retail.html">RETAIL</a></div>
               <div class="menu-item-container"><a class="menu-item selected" href="team.html">TEAM</a></div>
             </div>
@@ -192,10 +205,10 @@
                     110049
                   </div>
                   <div class='phone-number'>
-                    +917043575339
+                    +919892884388
                   </div>
                   <div>
-                    <a class="maps-locations" href="https://www.google.nl/maps/dir/''/greenr+delhi/@28.548497,77.1433147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce2141f89e1e7:0xe7d521cc14a584e6!2m2!1d77.213355!2d28.548515">
+                    <a class="maps-locations" target="_blank" href="https://www.google.nl/maps/dir/''/greenr+delhi/@28.548497,77.1433147,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce2141f89e1e7:0xe7d521cc14a584e6!2m2!1d77.213355!2d28.548515">
                       Open in Google Maps
                     </a>
                   </div>
@@ -208,6 +221,12 @@
 
     </body>
     <script type="text/javascript">
+      $(document).click(function (e) {
+        if($('#menu').hasClass("in")&&!$(e.target).closest('#menu').length&&!$(e.target).closest('#btn-scroll').length){
+          $("#menu").toggleClass('in');
+          $('#body-fade').toggleClass('body-fade');
+        }
+      });
       $("[data-toggle='toggle']").click(function() {
           console.log($(this), 'got here');
           var selector = $(this).data("target");
