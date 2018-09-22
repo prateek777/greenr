@@ -21,7 +21,7 @@
 
         .main-background {
             height: 580px;
-            background: url("static/img/landing-image.jpg")  no-repeat center;
+            background: url("static/img/landing-bg1.jpg")  no-repeat center;
             background-size: cover;
             display: flex;
             align-items: center;
@@ -505,13 +505,13 @@
           display: block;
         }
 
-        .stats-head-row2 {
+        .stats-head-row1 {
           font-size: 20px;
           letter-spacing: 4px;
           font-weight: 500;
         }
 
-        .stats-head-row1 {
+        .stats-head-row2 {
           font-size: 14px;
         }
 
@@ -630,6 +630,15 @@
           color: #fff;
         }
 
+        .maps-locations-green {
+          color: #173e4f;
+        }
+
+        .maps-locations-green:hover {
+          color: #173e4f;
+          font-weight: 900;
+        }
+
         .maps-locations:hover {
           color: #173e4f;
           font-weight: 900;
@@ -721,6 +730,7 @@
 
           .footer-cafe-address {
             flex-basis: 100%;
+            padding: 0 10px;
           }
 
           .footer-co-address {
@@ -934,10 +944,10 @@
         outline: none;
       }
 
-      .sleepy-owl {
-        background: url("static/img/sleepy-owl@2x.jpg") center no-repeat;
+      .martin {
+        background: url("static/img/martin_logo.png") center no-repeat;
         padding: 90px;
-        background-size: 126px;
+        background-size: 200px;
         outline: none;
       }
 
