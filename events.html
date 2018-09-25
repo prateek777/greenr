@@ -79,6 +79,8 @@
                 </div>
                 <div class="event-timings" id="event-timings">
                 </div>
+                <div class="event-timings" id="event-address">
+                </div>
               </div>
               <button class="arrow-right">
               </button>
@@ -87,7 +89,7 @@
               <div class="event-description" id="event-description">
               </div>
               <div class="more-about-btn-container">
-                <a id="event-link" target="_blank">
+                <a id="dynamic-event-link" target="_blank">
                   <button class="more-about-btn">
                     Attend this event
                   </button>
@@ -240,94 +242,101 @@
 
       $('#valid-event').css('display', 'none');
       $('#invalid-event').css('display', 'none');
-      function formatDate() {
-        var monthNames = [
-          "January", "February", "March",
-          "April", "May", "June", "July",
-          "August", "September", "October",
-          "November", "December"
-        ];
-        date = new Date(); 
-        var day = date.getDate();
-        var monthIndex = date.getMonth();
-        var year = date.getFullYear();
-        var dateStr = year + '-' + (monthIndex+1) + '-' + day;
-        return dateStr;
+      var url = "https://spreadsheets.google.com/feeds/cells/1OyV_c_nY6wSDX_FqfbaBediGxHvaIPfdaDzYRj7AJQ8/od6/public/basic?alt=json";
+      $.ajax({
+          url:url,
+          success:function(data) {
+            // console.warn(data)
+            constuctEventsModel(data)
+              // data.feed.entry is an array of objects that represent each cell
+          },
+      });
+
+      function constuctEventsModel(data) {
+        if (data.feed && data.feed.entry && data.feed.entry.length) {
+          var noOfEvents = data.feed.entry.length / 6
+          var eventsList = data.feed.entry
+          console.warn(noOfEvents)
+          for (i=1; i<noOfEvents && noOfEvents > 1; i++) {
+            var event = {}
+            event.name = eventsList[6*i].content.$t
+            event.image = eventsList[6*i + 1].content.$t 
+            event.start_time = eventsList[6*i + 2].content.$t
+            event.address = eventsList[6*i + 3].content.$t
+            event.description = eventsList[6*i + 4].content.$t
+            event.link = eventsList[6*i + 5].content.$t
+            events.push(event)
+          }
+          populateEvents()
+        }
       }
+
       $(document).click(function (e) {
         if($('#menu').hasClass("in")&&!$(e.target).closest('#menu').length&&!$(e.target).closest('#btn-scroll').length){
           $("#menu").toggleClass('in');
           $('#body-fade').toggleClass('body-fade');
         }
       });
+
       $("[data-toggle='toggle']").click(function() {
           var selector = $(this).data("target");
           $(selector).toggleClass('in');
           $('#body-fade').toggleClass('body-fade');
       });
+
+      function populateEvents() {
+        if (events.length) {
+          $('#invalid-event').css('display', 'none');
+          $('#valid-event').css('display', 'inherit');
+          
+          if (!(event_number > 0 && events.length)) {
+            $(".arrow-left").addClass('opaque-arrows');
+          }
+
+          if(!(events.length && event_number < (events.length -1))) {
+            $(".arrow-right").addClass('opaque-arrows');
+          }
+          populateEvent(events[0])
+        } else {
+          $('#valid-event').css('display', 'none');
+          $('#invalid-event').css('display', 'inherit');
+          $('#noevent-description').html("Sorry We don't have any events right for now, but keep checking this space and our facebook page for more.");
+          $('#event-link').attr("href", 'https://www.facebook.com/502271293254118/')
+        }
+      }
+
       function populateEvent(data) {
-        if(data.cover) {
+        console.warn(data)
+        if(data.image) {
           // $('#event-image').css('background', 'url('+ data.cover.source + ') center/150px no-repeat');
           // $('#event-image').css('background-size', '400px 400px');
-          $("#event-image").attr("src", data.cover.source);
+          $("#event-image").attr("src", data.image);
           $('#event-image').addClass('event-image');  
         }
         if(data.name) {
           $('#event-name').html(data.name)
         }
         if(data.start_time) {
-          $('#event-timings').html((new Date(data.start_time)).toLocaleDateString("en-US",options) + (' | ' + data.place.name || '') + (data.place.location && data.place.location.city && (', ' + data.place.location.city) || ''))
+          $('#event-timings').html(data.start_time)
         }
+
+        if(data.address) {
+          $('#event-address').html(data.address)
+        }
+
         if(data.description) {
           $('#event-description').html(data.description)
         }
-        if(data.id) {
-          $('#event-link').attr("href", 'https://www.facebook.com/events/' + data.id)
+        if(data.link) {
+          $('#dynamic-event-link').attr("href", data.link)
         }
-      }
+      } 
 
       $("#event-image").css("position", "relative");
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : '1912273135754917',
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v2.12'
-        });
 
+          
       
-        
-        FB.api(
-          '/502271293254118/events',
-          'GET',
-          {
-            "fields":"timezone,cover,id,end_time,name,place,type,start_time,owner,event_times,description",
-            "access_token": "1912273135754917|2OawwizLXmwFdnkRAUmxjgb956U",
-            // "since": formatDate(),
-          },
-          function(response) {
-            console.log(response);
-
-            if (response.data && response.data.length) {
-              $('#invalid-event').css('display', 'none');
-              $('#valid-event').css('display', 'inherit');
-              events = response.data && response.data.reverse();
-              if (!(event_number > 0 && events.length)) {
-                $(".arrow-left").addClass('opaque-arrows');
-              }
-
-              if(!(events.length && event_number < (events.length -1))) {
-                $(".arrow-right").addClass('opaque-arrows');
-              }
-              populateEvent(response.data[0])
-            } else {
-              $('#valid-event').css('display', 'none');
-              $('#invalid-event').css('display', 'inherit');
-              $('#noevent-description').html("Sorry We don't have any events right for now, but keep checking this space and our facebook page for more.");
-              $('#event-link').attr("href", 'https://www.facebook.com/502271293254118/')
-            }
-        });
-      };
+      
 
       $(".arrow-left").click(function() {
         if (event_number > 0 && events.length) {
@@ -342,6 +351,7 @@
           $(".arrow-left").addClass('opaque-arrows');
         }
       });
+
       $(".arrow-right").click(function() {
         if (events.length && event_number < (events.length -1)) {
           event_number += 1
@@ -356,13 +366,5 @@
         }
       });
 
-      (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       console.log('jhi');
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
   </script>
 </html>
