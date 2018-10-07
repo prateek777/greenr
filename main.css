@@ -1069,6 +1069,11 @@
         }
       }
 
+      .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
+      }
+
       .team-item-description {
         max-width: 750px;
         font-size: 24px;

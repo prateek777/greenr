@@ -389,15 +389,27 @@
       </div>
     <script src="lightbox-plus-jquery.min.js"></script>  
     </body>
-    <script type="text/javascript">
-      
-    </script>
+    <script type="text/javascript" sec="https://rawgit.com/pratik916/jQuery-Hide-Show-Event/master/js/hideshow.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
           lightbox.option({
             'alwaysShowNavOnTouchDevices': true,
-            'disableScrolling': false
+            // 'disableScrolling': true,
+            // 'fitImagesInViewport': true,
+            // 'positionFromTop': 0,
           })
+          var observer = new MutationObserver(function(mutations) {
+              // console.log(mutations);
+              if($('#lightbox').is(":hidden")) {
+                $('body').removeClass('stop-scrolling');
+              }
+
+            });
+            var target = document.querySelector('#lightbox');
+            observer.observe(target, {
+              attributes: true
+            });
+
       });
       $(document).click(function (e) {
         if($('#menu').hasClass("in")&&!$(e.target).closest('#menu').length&&!$(e.target).closest('#menu-btn').length){
@@ -405,6 +417,16 @@
           $('#body-fade').toggleClass('body-fade');
         }
       });
+
+      
+
+      $('.example-image-link').click(function() {
+        if ($('#lightbox:visible')) {
+          $('body').addClass('stop-scrolling');
+        }
+      });
+
+      
       $("[data-toggle='toggle']").click(function() {
           console.log($(this), 'got here');
           var selector = $(this).data("target");
