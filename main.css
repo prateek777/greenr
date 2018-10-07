@@ -1051,13 +1051,22 @@
 
       .team-item-picture {
         /*background: url("static/img/team-item-picture.png") center no-repeat;*/
-        height: 338px;
+        height: 258px;
         background-size: contain;
       }
 
       .team-item-reverse .team-item-picture {
-        /*background: url("static/img/team-item-picture.png") center no-repeat;*/
         background-position: right;
+      }
+
+      @media screen and (max-width: 1070px) {
+        .team-item-reverse .team-item-picture {
+          background-position: center;
+        }
+
+        .team-item .team-item-picture {
+          background-position: center;
+        }
       }
 
       .team-item-description {
