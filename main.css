@@ -636,7 +636,6 @@
 
         .maps-locations-green:hover {
           color: #173e4f;
-          font-weight: 900;
         }
 
         .maps-locations:hover {
@@ -647,8 +646,6 @@
 
         .maps-locations-white:hover {
           color: #fff;
-          font-weight: 900;
-          text-decoration: none;
         }
 
         .footer-brand {
@@ -1028,13 +1025,39 @@
         outline: none;
       }
 
+      .nitin {
+        background: url("static/img/nitin.jpg") no-repeat;
+      }
+
+      .mohit {
+        background: url("static/img/mohit.jpg") no-repeat;
+      }
+
+      .vaibhav {
+        background: url("static/img/vaibhav.jpeg") no-repeat;
+      }
+
+      .malavika {
+        background: url("static/img/malavika.jpg") no-repeat;
+      }
+
+      .nandini {
+        background: url("static/img/nandini.jpg") no-repeat;
+      }
+
+      .rajvi {
+        background: url("static/img/rajvi.jpeg") no-repeat;
+      }
+
       .team-item-picture {
         /*background: url("static/img/team-item-picture.png") center no-repeat;*/
-        max-width: 100%;
+        height: 338px;
+        background-size: contain;
+      }
 
-        /*padding: 90px;*/
-        /*background-size: 90px;*/
-        height: 350px;
+      .team-item-reverse .team-item-picture {
+        /*background: url("static/img/team-item-picture.png") center no-repeat;*/
+        background-position: right;
       }
 
       .team-item-description {
@@ -1386,6 +1409,7 @@
       .brand {
         display: inline-block;
         width: 99%;
+        cursor: initial;
       }
 
       .event-details-container {
